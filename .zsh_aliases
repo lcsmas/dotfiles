@@ -1,0 +1,35 @@
+alias aliases='batcat ~/.zsh_aliases'
+
+# program
+alias pip="$HOME/.local/bin/pip"
+alias bat='batcat'
+alias copy='xclip -selection clipboard'
+
+# neovim shortcuts
+alias n='nvim'
+alias na='nvim ~/.zsh_aliases'
+alias nt='nvim ~/.tmux.conf'
+alias nn='nvim ~/.config/nvim/'
+
+# komorebic
+alias k='komorebic.exe start --whkd'
+alias ks='komorebic.exe stop'
+alias nk='nvim /mnt/c/Users/Lucas/komorebi.json'
+
+# source
+alias sa='source ~/.zsh_aliases'
+alias st='tmux source ~/.tmux.conf'
+
+# work
+alias api='cd ~/dev/workspace/packages/api-v2/'
+alias rdss="fetch_aws_data && rds-staging"
+alias rdsp="fetch_aws_data && rds-production"
+
+# finding
+alias fdf="fdfind"
+alias fb='fzf --preview "batcat --color=always --style=numbers --line-range=:500 {}"'
+alias fn='n $(fb)'
+alias fc='cd $(fdf -t d | fzf)'
+
+# docker
+alias dh='docker compose -f ~/dev/workspace/docker-compose-custom.yml up hasura hasura-admin -d && docker logs -f mobile-club-hasura | jq "."'
