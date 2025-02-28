@@ -29,4 +29,6 @@ source ~/.custom-function
 
 [ -f ~/.zsh_secret ] && source ~/.zsh_secret
 
+# Execute fzf if it is installed
+[ -f ~/.fzf.zsh ] && fc
 
