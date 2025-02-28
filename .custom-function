@@ -16,11 +16,11 @@ fetch_aws_data () {
         EC_JOBS_STAGING_ENDPOINT=$(get_elasti_cache_endpoint "mobileclub-staging-redis")
 }
 
-alias rds-production='ssm-tunnel production.mobileclub.internal "5432" "6000'
-alias rds-ro='ssm-tunnel production.mobileclub.internal "5432" "6000'
+alias rds-production='ssm-tunnel production.mobileclub.internal "5432" "6000"'
+alias rds-ro='ssm-tunnel production.mobileclub.internal "5432" "6000"'
 alias rds-strapi-production='ssm-tunnel "$RDS_STRAPI_PRODUCTION_HOST" "5432" "7000"'
 
-alias rds-staging='ssm-tunnel "$RDS_STAGING_HOST" "5432" "6001'
+alias rds-staging='ssm-tunnel "$RDS_STAGING_HOST" "5432" "6001"'
 alias rds-strapi-staging='ssm-tunnel "$RDS_STRAPI_STAGING_HOST" "5432" "7001"'
 
 alias ec-api-v2-production='ssm-tunnel "$EC_API_V2_PRODUCTION_ENDPOINT" "6379" "8000"'

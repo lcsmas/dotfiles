@@ -30,4 +30,3 @@ source ~/.zsh_aliases
 source ~/.custom-function
 
 
-# test
