@@ -22,11 +22,11 @@ export PATH="$PATH:/opt/nvim/:$HOME/.local/share/kotlin-language-server/bin:$HOM
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ENVIROMENT VARIABLES
-export ANTHROPIC_API_KEY=
 # ALIASES
 source ~/.zsh_aliases
 
 source ~/.custom-function
+
+[ -f ~/.zsh_secret ] && source ~/.zsh_secret
 
 
