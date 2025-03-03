@@ -6,7 +6,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git pj zsh-vi-mode yarn-autocompletions zsh-autosuggestions)
 
 
-source $ZSH/oh-my-zsh.sh
+[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 export DISPLAY=:0
 
@@ -30,5 +30,5 @@ source ~/.custom-function
 [ -f ~/.zsh_secret ] && source ~/.zsh_secret
 
 # Execute fzf if it is installed
-[ -f ~/.fzf.zsh ] && fc
+# [ -f ~/.fzf.zsh ] && fc
 
