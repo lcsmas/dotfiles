@@ -20,9 +20,8 @@ export PATH="$PATH:/opt/nvim/:$HOME/.local/share/kotlin-language-server/bin:$HOM
 
 # FZF
 # Set up fzf key bindings and fuzzy completion
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
-# ALIASES
 source ~/.zsh_aliases
 
 source ~/.custom-function
