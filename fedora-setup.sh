@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 sudo dnf update -y
 sudo dnf install -y wayland sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh
 
