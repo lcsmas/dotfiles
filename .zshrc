@@ -18,15 +18,12 @@ export BROWSER='wslview'
 
 export PATH="$PATH:/opt/nvim/:$HOME/.local/share/kotlin-language-server/bin:$HOME/.local/bin"
 
-# FZF
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
 source ~/.zsh_aliases
 
 source ~/.custom-function
 
 [ -f ~/.zsh_secret ] && source ~/.zsh_secret
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Execute fzf if it is installed
 # [ -f ~/.fzf.zsh ] && fc
