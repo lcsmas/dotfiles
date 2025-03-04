@@ -5,7 +5,7 @@ set -e
 echo "Starting Fedora setup script..."
 
 sudo dnf update -y
-sudo dnf install -y wayland sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh
+sudo dnf install -y wayland sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox
 
 dnf copr enable pgdev/ghostty
 dnf install ghostty
