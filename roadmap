@@ -1,5 +1,3 @@
-[ ] rebind tmux kill session 
-[ ] rebind tmux rename session
 [x] check if dnf tmux version is 3.5a
 	[x] if not install it from source 
 	[x] verify ~/.tmux owner is current user, else : sudo chown -R $(whoami):$(whoami) ~/.tmux
