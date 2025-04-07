@@ -6,6 +6,10 @@ function get_elasti_cache_endpoint() {
   aws elasticache describe-cache-clusters --show-cache-node-info --cache-cluster-id $1 --query "CacheClusters[].CacheNodes[].Endpoint.Address | [0]" --output text
 }
 
+function ssm-tunnel() {
+    aws ssm start-session --target $BASTION_ID --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host=$1,portNumber=$2,localPortNumber=$3
+}
+
 fetch_aws_data () {
         BASTION_ID=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=MC Bastion" --query "Reservations[].Instances[].InstanceId | [0]" --output text)
         RDS_STAGING_HOST=$(get_ssm_parameter "/Staging/DB_HOST")
