@@ -11,6 +11,7 @@ dnf copr enable -y pgdev/ghostty
 dnf install ghostty
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/lcsmas/nvim-config ~/.config/nvim
 
 git clone https://www.github.com/lcsmas/dotfiles
 cd dotfiles
