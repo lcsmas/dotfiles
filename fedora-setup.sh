@@ -7,8 +7,8 @@ echo "Starting Fedora setup script..."
 sudo dnf update -y
 sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find
 
-dnf copr enable -y pgdev/ghostty
-dnf install ghostty
+sudo dnf copr enable -y pgdev/ghostty
+sudo dnf install -y ghostty
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/lcsmas/nvim-config ~/.config/nvim
