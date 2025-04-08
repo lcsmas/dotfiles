@@ -25,7 +25,6 @@ if [ ! -d ~/.config/nvim ]; then
 	git clone https://github.com/lcsmas/nvim-config ~/.config/nvim
 fi
 
-
 if [ ! -d ~/dotfiles ]; then
 	git clone https://www.github.com/lcsmas/dotfiles ~/dotfiles
 	cd dotfiles
