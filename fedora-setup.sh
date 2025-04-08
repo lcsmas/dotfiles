@@ -26,6 +26,10 @@ ln -s $DOTFILE_DIR/tmux-sessionizer.sh ~/.local/bin/tmux-sessionizer.sh
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install -y lazygit
 
+sudo dnf install -y fedora-workstation-repositories
+sudo dnf config-manager setopt google-chrome.enabled=1
+sudo dnf install -y google-chrome-stable
+
 echo "Sudo password is required to change the default shell to zsh."
 sudo chsh -s $(which zsh) $USER
 echo "Zsh has been installed and set as your default shell."
