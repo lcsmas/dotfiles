@@ -4,6 +4,7 @@ alias aliases='batcat ~/.zsh_aliases'
 alias pip="$HOME/.local/bin/pip"
 alias bat='batcat'
 alias copy='xclip -selection clipboard'
+alias lg='lazygit'
 
 # neovim shortcuts
 alias n='nvim'
