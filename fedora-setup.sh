@@ -23,6 +23,8 @@ for file in $DOTFILES; do
 		echo "Created symlink for $file"
 done
 ln -s $DOTFILE_DIR/tmux-sessionizer.sh ~/.local/bin/tmux-sessionizer.sh
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install -y lazygit
 
 echo "Sudo password is required to change the default shell to zsh."
 sudo chsh -s $(which zsh) $USER
