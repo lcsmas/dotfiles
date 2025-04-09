@@ -5,7 +5,7 @@ set -e
 echo "Starting Fedora setup script..."
 
 sudo dnf update -y
-sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find
+sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find nodejs yarnpkg
 
 sudo dnf copr enable -y pgdev/ghostty
 sudo dnf install -y ghostty
@@ -16,6 +16,10 @@ sudo dnf install -y lazygit
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager setopt google-chrome.enabled=1
 sudo dnf install -y google-chrome-stable
+
+if [ ! -d ~/.nvm ]; then
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+fi
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -40,9 +44,10 @@ if [ ! -d ~/dotfiles ]; then
 	ln -sf $DOTFILE_DIR/tmux-sessionizer.sh ~/.local/bin/tmux-sessionizer.sh
 fi
 
+# Install ohmyzsh, using existing .zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
 
-echo "Sudo password is required to change the default shell to zsh."
-sudo chsh -s $(which zsh) $USER
-echo "Zsh has been installed and set as your default shell."
-echo "Please log out and log back in for the changes to take effect."
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
 
