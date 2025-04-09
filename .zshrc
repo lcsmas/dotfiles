@@ -1,7 +1,7 @@
 # ZSH setup
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git zsh-vi-mode yarn-autocompletions zsh-autosuggestions)
+plugins=(git vi-mode yarn zsh-autosuggestions)
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 # Key bindings
