@@ -5,7 +5,7 @@ set -e
 echo "Starting Fedora setup script..."
 
 sudo dnf update -y
-sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find nodejs yarnpkg
+sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find nodejs socat
 
 sudo dnf copr enable -y pgdev/ghostty
 sudo dnf install -y ghostty
@@ -17,7 +17,7 @@ sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager setopt google-chrome.enabled=1
 sudo dnf install -y google-chrome-stable
 
-npm install -g tldr
+npm install -g tldr yarn
 
 if [ ! -d ~/.nvm ]; then
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
