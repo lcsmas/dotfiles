@@ -1,5 +1,7 @@
 # ZSH setup
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="nvim"
+
 ZSH_THEME="robbyrussell"
 plugins=(git vi-mode yarn zsh-autosuggestions)
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
