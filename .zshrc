@@ -7,7 +7,7 @@ plugins=(git zsh-vi-mode yarn zsh-autosuggestions)
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 # Key bindings
-bindkey '^[o' autosuggest-accept
+bindkey -v '^[o' autosuggest-accept
 
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
