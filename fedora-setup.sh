@@ -54,9 +54,9 @@ sudo dnf copr enable atim/lazygit -y
 sudo dnf install -y lazygit
 
 sudo dnf install -y fedora-workstation-repositories
-# sudo dnf config-manager setopt google-chrome.enabled=1
-# sudo dnf install -y google-chrome-stable
-sudo dnf install google-chrome-stable --enable repo=google-chrome
+if ! sudo dnf config-manager setopt google-chrome.enabled=1 || ! sudo dnf install -y google-chrome-stable; then
+  echo "Warning: Failed to install Google Chrome. Continuing with setup..."
+fi
 
 
 npm install -g tldr yarn
