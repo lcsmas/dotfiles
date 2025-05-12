@@ -73,7 +73,7 @@ fi
 
 if [ ! -d ~/dotfiles ]; then
 	git clone https://www.github.com/lcsmas/dotfiles ~/dotfiles
-	cd dotfiles
+	cd ~/dotfiles
 	DOTFILES=$(ls -la | grep -v '^d' | awk '{ print $9 }' | grep -v '^$' | grep '^\.' | grep -v 'example$' | grep -v '.gitignore' | grep -v '.bashrc')
 	DOTFILE_DIR=$(pwd)
 
