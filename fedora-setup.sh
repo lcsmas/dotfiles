@@ -5,7 +5,47 @@ set -e
 echo "Starting Fedora setup script..."
 
 sudo dnf update -y
-sudo dnf install -y sway pipewire wireplumber tmux git wget curl gcc make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip
+
+choose_wm() {
+  while true; do
+    echo "Which window manager would you like to install?"
+    echo "1) Sway"
+    echo "2) Hyprland"
+    echo "3) Both"
+    echo "4) None"
+    read -p "Enter your choice (1-4): " wm_choice
+    
+    case $wm_choice in
+      1)
+        echo "Installing Sway..."
+        sudo dnf install -y sway
+        return
+        ;;
+      2)
+        echo "Installing Hyprland..."
+        sudo dnf install -y hyprland
+        return
+        ;;
+      3)
+        echo "Installing both Sway and Hyprland..."
+        sudo dnf install -y sway hyprland
+        return
+        ;;
+      4)
+        echo "Skipping window manager installation..."
+        return
+        ;;
+      *)
+        echo "Invalid choice. Please enter a number between 1 and 4."
+        echo ""
+        ;;
+    esac
+  done
+}
+
+choose_wm
+
+sudo dnf install -y pipewire wireplumber tmux git wget curl gcc clang make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip
 
 sudo dnf copr enable -y pgdev/ghostty
 sudo dnf install -y ghostty
