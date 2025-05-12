@@ -58,8 +58,7 @@ if ! sudo dnf config-manager setopt google-chrome.enabled=1 || ! sudo dnf instal
   echo "Warning: Failed to install Google Chrome. Continuing with setup..."
 fi
 
-
-npm install -g tldr yarn
+sudo npm install -g tldr yarn
 
 if [ ! -d ~/.nvm ]; then
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
