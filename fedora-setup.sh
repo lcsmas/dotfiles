@@ -84,6 +84,12 @@ if [ ! -d ~/dotfiles ]; then
 
 	mkdir -p ~/.local/bin/
 	ln -sf $DOTFILE_DIR/tmux-sessionizer.sh ~/.local/bin/tmux-sessionizer.sh
+
+	mkdir -p ~/.config/sway
+	ln -sf $DOTFILE_DIR/sway ~/.config/sway
+
+	mkdir -p ~/.config/swaylock
+	ln -sf $DOTFILE_DIR/swaylock ~/.config/swaylock
 fi
 
 # Install ohmyzsh, using existing .zshrc
