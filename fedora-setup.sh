@@ -93,13 +93,15 @@ if [ ! -d ~/dotfiles ]; then
 	ln -sf $DOTFILE_DIR/swaylock ~/.config/swaylock
 fi
 
-# Install zsh plugins
-if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ZSH_PLUGINS_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins
+mkdir -p "$ZSH_PLUGINS_DIR"
+
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-autosuggestions" ]; then
+	git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
 fi
 
-if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode ]; then
-	git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-vi-mode" ]; then
+	git clone https://github.com/jeffreytse/zsh-vi-mode "$ZSH_PLUGINS_DIR/zsh-vi-mode"
 fi
 
 # Install ohmyzsh, using existing .zshrc
