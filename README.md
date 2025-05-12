@@ -1,5 +1,5 @@
 # Installation
 
 ```shell
-curl -s https://raw.githubusercontent.com/lcsmas/master/fedora-setup.sh | bash
+curl -s https://raw.githubusercontent.com/lcsmas/dotfiles/master/fedora-setup.sh | bash
 ```
