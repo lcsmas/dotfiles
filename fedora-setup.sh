@@ -93,8 +93,13 @@ if [ ! -d ~/dotfiles ]; then
 	ln -sf $DOTFILE_DIR/swaylock ~/.config/swaylock
 fi
 
+
+# Install ohmyzsh, using existing .zshrc
+# Prevents script exiting because of the error concerning the plugins in .zshrc that are not installed yet
 ZSH_PLUGINS_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins
-mkdir -p "$ZSH_PLUGINS_DIR"
+set +e
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+set -e
 
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-autosuggestions" ]; then
 	git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
@@ -103,7 +108,4 @@ fi
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-vi-mode" ]; then
 	git clone https://github.com/jeffreytse/zsh-vi-mode "$ZSH_PLUGINS_DIR/zsh-vi-mode"
 fi
-
-# Install ohmyzsh, using existing .zshrc
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
 
