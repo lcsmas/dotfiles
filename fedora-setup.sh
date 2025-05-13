@@ -45,7 +45,7 @@ choose_wm() {
 
 choose_wm
 
-sudo dnf install -y pipewire wireplumber tmux git wget curl gcc clang make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip
+sudo dnf install -y pipewire wireplumber tmux git wget curl gcc clang make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip chromium
 
 sudo dnf copr enable -y pgdev/ghostty
 sudo dnf install -y ghostty
@@ -86,11 +86,8 @@ if [ ! -d ~/dotfiles ]; then
 	mkdir -p ~/.local/bin/
 	ln -sf $DOTFILE_DIR/tmux-sessionizer.sh ~/.local/bin/tmux-sessionizer.sh
 
-	mkdir -p ~/.config/sway
-	ln -sf $DOTFILE_DIR/sway ~/.config/sway
-
-	mkdir -p ~/.config/swaylock
-	ln -sf $DOTFILE_DIR/swaylock ~/.config/swaylock
+	ln -sf $DOTFILE_DIR/sway ~/.config
+	ln -sf $DOTFILE_DIR/swaylock ~/.config
 fi
 
 
