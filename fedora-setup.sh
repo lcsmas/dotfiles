@@ -45,7 +45,7 @@ choose_wm() {
 
 choose_wm
 
-sudo dnf install -y pipewire wireplumber tmux git wget curl gcc clang make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip chromium
+sudo dnf install -y pipewire wireplumber tmux git wget curl gcc clang make fzf neovim python3-neovim zsh firefox fd-find nodejs socat flameshot cargo python3-pip chromium rofi-wayland
 
 sudo dnf copr enable -y pgdev/ghostty
 sudo dnf install -y ghostty
