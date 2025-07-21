@@ -8,6 +8,7 @@ plugins=(git zsh-vi-mode yarn zsh-autosuggestions)
 
 # Key bindings
 bindkey -v '^[o' autosuggest-accept
+bindkey -v '^o' autosuggest-accept
 
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
