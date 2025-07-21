@@ -88,6 +88,8 @@ if [ ! -d ~/dotfiles ]; then
 
 	ln -sf $DOTFILE_DIR/sway ~/.config
 	ln -sf $DOTFILE_DIR/swaylock ~/.config
+	ln -sf $DOTFILE_DIR/rofi ~/.config
+	ln -sf $DOTFILE_DIR/waybar ~/.config
 fi
 
 
