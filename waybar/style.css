@@ -49,6 +49,11 @@
   padding: 5px 8px;
   margin: 5px 0px;
 }
+
+#bluetooth:hover {
+  background-color: @overlay0;
+}
+
 #network:hover {
   background-color: @overlay0;
 }
