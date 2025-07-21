@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "battery", "tray"],
+    "modules-right": ["idle_inhibitor", "bluetooth", "pulseaudio", "network", "battery", "tray"],
     "tray": {
         "icon-size": 21,
         "spacing": 10
@@ -17,6 +17,9 @@
             "deactivated": ""
         }
     },
+	"bluetooth": {
+		"format": " {device_alias}"
+	},
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%H:%M - %d/%m/%Y}",
@@ -26,15 +29,12 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "pulseaudio": {
@@ -46,4 +46,12 @@
         },
         "on-click": "pavucontrol"
     },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠", 
+	      "on-click": "~/.config/rofi/rofi-wifi-menu.sh"
+	},
 }

@@ -41,11 +41,16 @@
 #clock,
 #battery,
 #pulseaudio,
+#network,
+#bluetooth,
 #idle_inhibitor {
   background-color: @surface0;
   opacity: 0.8;
   padding: 5px 8px;
   margin: 5px 0px;
+}
+#network:hover {
+  background-color: @overlay0;
 }
 
 #clock {
@@ -54,11 +59,19 @@
   padding: 5px 20px;
 }
 
+#clock:hover {
+  background-color: @overlay0;
+}
+
 #battery {
   color: @green;
   margin-right: 1rem;
   padding-right: 20px;
   border-radius: 0px 1rem 1rem 0px;
+}
+
+#battery:hover {
+  background-color: @overlay0;
 }
 
 #battery.charging {
@@ -69,15 +82,15 @@
   color: @red;
 }
 
-#backlight {
-  color: @yellow;
-}
-
 #idle_inhibitor {
   color: @lavender;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
   padding-left: 20px;
+}
+
+#idle_inhibitor:hover {
+  background-color: @overlay0;
 }
 
 #pulseaudio {
