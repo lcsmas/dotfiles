@@ -4,8 +4,8 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "bluetooth", "pulseaudio", "network", "battery", "tray"],
+    // "modules-center": ["clock"],
+    "modules-right": [ "idle_inhibitor", "bluetooth", "pulseaudio", "network", "sway/language", "backlight", "battery", "clock",  "tray"],
     "tray": {
         "icon-size": 21,
         "spacing": 10
@@ -13,13 +13,22 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "bluetooth": {
         "format": "",
 				"format-connected": " {device_alias}"
+		},
+	"backlight": {
+		"on-scroll-up" : "brightnessctl set +10%",
+		"on-scroll-down" : "brightnessctl set 10%-",
+		"format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+	},
+		"sway/language" : {
+			"format": "{short} {variant}"
 		},
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -31,9 +40,9 @@
             "good": 95,
             "warning": 30,
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}% ",
+        "format-charging": " {capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
@@ -49,12 +58,12 @@
     },
     "network": {
         // "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-wifi": "{signalStrength}% ",
+        "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         // "tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠", 
-	      "on-click": "~/.config/rofi/rofi-wifi-menu.sh"
+	      "on-click": "nmcli device wifi list",
 	},
 }

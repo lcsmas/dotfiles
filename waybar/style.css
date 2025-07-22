@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
+  font-family: Hack Nerd Font;
   font-size: 13px;
   min-height: 0;
 }
@@ -43,14 +43,20 @@
 #pulseaudio,
 #network,
 #bluetooth,
+#language,
+#backlight,
 #idle_inhibitor {
   background-color: @surface0;
   opacity: 0.8;
-  padding: 5px 8px;
+  padding: 5px 15px;
   margin: 5px 0px;
 }
 
 #bluetooth:hover {
+  background-color: @overlay0;
+}
+
+#language:hover {
   background-color: @overlay0;
 }
 
@@ -62,6 +68,7 @@
   color: @blue;
   border-radius: 1rem 1rem 1rem 1rem;
   padding: 5px 20px;
+  margin-right: 20px;
 }
 
 #clock:hover {
