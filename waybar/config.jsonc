@@ -21,12 +21,12 @@
         "format": "",
 				"format-connected": " {device_alias}"
 		},
-	"backlight": {
-		"on-scroll-up" : "brightnessctl set +10%",
-		"on-scroll-down" : "brightnessctl set 10%-",
-		"format": "{percent}% {icon}",
-    "format-icons": ["", ""]
-	},
+		"backlight": {
+			"on-scroll-up" : "brightnessctl set +10%",
+			"on-scroll-down" : "brightnessctl set 10%-",
+			"format": "{percent}% {icon}",
+			"format-icons": ["", ""]
+		},
 		"sway/language" : {
 			"format": "{short} {variant}"
 		},
@@ -38,7 +38,7 @@
     "battery": {
         "states": {
             "good": 95,
-            "warning": 30,
+            "warning": 20,
         },
         "format": "{icon} {capacity}%",
         "format-full": "{icon} {capacity}% ",
