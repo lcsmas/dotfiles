@@ -2,8 +2,8 @@ alias aliases='bat ~/.zsh_aliases'
 
 # program
 alias pip="$HOME/.local/bin/pip"
-alias copy='xclip -selection clipboard'
 alias lg='lazygit'
+alias ld='lazydocker'
 alias sug='sway --unsupported-gpu'
 alias k4444="kill -9 $(lsof -i :4444 | awk 'NR!=1 {print $2}')"
 
