@@ -20,8 +20,7 @@ if grep -qi "microsoft\|wsl" /proc/version 2>/dev/null; then
 		export BROWSER='wslview'
 fi
 
-# Path setup
-export PATH="$PATH:/opt/nvim/:$HOME/.local/share/kotlin-language-server/bin:$HOME/.local/bin"
+export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH:/opt/nvim/:$HOME/.local/share/kotlin-language-server/bin:$HOME/.local/bin:$HOME/.cargo/bin/"
 
 # Custom scripts setup
 source ~/.zsh_aliases
