@@ -30,4 +30,6 @@ source ~/.custom-function.sh
 # FZF setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
