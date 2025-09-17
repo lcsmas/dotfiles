@@ -20,7 +20,7 @@ set $rofi_cmd rofi \
 set $menu $rofi_cmd -show combi -combi-modes drun#run#window#ssh#filebrowser#keys -modes combi
 
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /home/lmas/.config/sway/images/wallpaper.jpg fill
+output * bg /home/lmas/.config/sway/images/japanese_scene.jpeg fill
 gaps outer 4
 gaps inner 2
 default_border pixel 2
