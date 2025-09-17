@@ -1,11 +1,17 @@
 alias aliases='bat ~/.zsh_aliases'
 
+# system
+alias reboot="systemctl reboot"
+
 # program
 alias pip="$HOME/.local/bin/pip"
+# alias pip="$HOME/.local/bin/pip"
+# alias copy='xclip -selection clipboard'
 alias lg='lazygit'
 alias ld='lazydocker'
 alias sug='sway --unsupported-gpu'
 alias k4444="kill -9 $(lsof -i :4444 | awk 'NR!=1 {print $2}')"
+alias gpt="gpt --model claude-3-7-sonnet-20250219"
 
 # neovim shortcuts
 alias n='nvim'
@@ -33,7 +39,6 @@ alias rdsro="fetch_aws_data && rds-ro"
 alias fdf="fdfind"
 alias fb='fzf --preview "batcat --color=always --style=numbers --line-range=:500 {}"'
 alias fn='n $(fb)'
-alias fc='cd $(fdf -t d -H -I | fzf)'
 
 # docker
 alias dh='docker compose -f ~/dev/workspace/docker-compose-custom.yml up hasura hasura-admin -d && docker logs -f mobile-club-hasura | jq "."'
