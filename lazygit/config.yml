@@ -1,0 +1,6 @@
+customCommands:
+  - key: 'o'
+    context: 'localBranches'
+    command: "gh pr create --web 2>&1 | tee /dev/tty | grep -o 'https://[^[:space:]]*' | xargs -I {} sh -c 'TITLE=$(gh pr view {} --json title -q .title) && echo \"[$TITLE]({})\" | wl-copy && echo \"Markdown link copied to clipboard\"'"
+    description: 'Create PR, open in browser, and copy markdown link to clipboard'
+    loadingText: 'Creating PR...'
