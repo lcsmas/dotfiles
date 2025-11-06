@@ -25,8 +25,20 @@ gaps outer 4
 gaps inner 2
 default_border pixel 2
 
-output HDMI-A-1 disable
-output DP-3 resolution 1920x1080@240Hz
+output HDMI-A-1 resolution 1920x1080@60Hz position 1920 0
+output DP-3 resolution 1920x1080@240Hz position 0 0
+
+# Assign workspaces to left screen (DP-3) by default
+workspace 1 output DP-3
+workspace 2 output DP-3
+workspace 3 output DP-3
+workspace 4 output DP-3
+workspace 5 output DP-3
+workspace 6 output DP-3
+workspace 7 output DP-3
+workspace 8 output DP-3
+workspace 9 output DP-3
+workspace 10 output DP-3
 
 exec swayidle \
      timeout 36000 'swaylock -f -c 000000' \
@@ -60,10 +72,8 @@ bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left move workspace to output left
+bindsym $mod+Right move workspace to output right
 
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down

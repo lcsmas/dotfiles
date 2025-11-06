@@ -5,40 +5,10 @@ alias reboot="systemctl reboot"
 
 # program
 alias pip="$HOME/.local/bin/pip"
-# alias pip="$HOME/.local/bin/pip"
-# alias copy='xclip -selection clipboard'
 alias lg='lazygit'
 alias ld='lazydocker'
-alias sug='sway --unsupported-gpu'
-alias k4444="kill -9 $(lsof -i :4444 | awk 'NR!=1 {print $2}')"
-alias gpt="gpt --model claude-3-7-sonnet-20250219"
+# alias ls='eza'
 
 # neovim shortcuts
 alias n='nvim'
-alias na='nvim ~/.zsh_aliases'
-alias nt='nvim ~/.tmux.conf'
-alias nn='nvim ~/.config/nvim'
 
-# komorebic
-alias k='komorebic.exe start --whkd'
-alias ks='komorebic.exe stop'
-alias nk='nvim /mnt/c/Users/Lucas/komorebi.json'
-
-# source
-alias sa='source ~/.zsh_aliases'
-alias st='tmux source ~/.tmux.conf'
-alias sr='source ~/.zshrc'
-
-# work
-alias api='cd ~/dev/workspace/packages/api-v2/'
-alias rdss="fetch_aws_data && rds-staging"
-alias rdsp="fetch_aws_data && rds-production"
-alias rdsro="fetch_aws_data && rds-ro"
-
-# finding
-alias fdf="fdfind"
-alias fb='fzf --preview "batcat --color=always --style=numbers --line-range=:500 {}"'
-alias fn='n $(fb)'
-
-# docker
-alias dh='docker compose -f ~/dev/workspace/docker-compose-custom.yml up hasura hasura-admin -d && docker logs -f mobile-club-hasura | jq "."'

@@ -1,0 +1,6 @@
+customCommands:
+  - key: "o"
+    context: "localBranches"
+    command: "/home/lmas/dotfiles/lazygit/create-pr.sh; exit"
+    description: "Create PR, open in browser, and copy markdown link to clipboard"
+    loadingText: "Creating PR..."

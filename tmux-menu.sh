@@ -1,10 +1,7 @@
 #!/usr/bin/zsh -i
 
-selected=$(printf "%b" "yarn dev\n~/dev/workspace/scripts/custom-go-release.sh\nnvm use 18\nreboot\n" | fzf --reverse --prompt='Select command: ')
+# Capture the current working directory
+ORIGINAL_PWD="$PWD"
 
-if [[ $selected == '' ]]; then 
-  exit 0
-fi
-
-tmux neww -n $selected "zsh -ic '$selected'; zsh -i"
-
+# Run Ink (React) tmux menu with the original directory
+cd ~/dotfiles/tmux-menu && bun index.tsx "$ORIGINAL_PWD"
