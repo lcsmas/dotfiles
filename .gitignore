@@ -1,1 +1,3 @@
 Session.vim
+*app-*.conf
+!*-app-default.conf

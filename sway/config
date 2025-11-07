@@ -1,11 +1,15 @@
 # Read `man 5 sway` for a complete reference.
 
-#
-# Mod4 is Logo key. Use Mod1 for Alt.
-# set $mod Mod4
-# set $mod Ctrl
+# Mod4 is Logo key. 
+# Mod1 is Alt key.
 set $alt Mod1
-set $mod $alt
+set $super Mod4
+
+# Default modifier (can be overridden by host-specific config)
+set $mod $super
+
+# Include host-specific overrides early (before bindsym commands)
+include '$(./layered-include "${XDG_CONFIG_HOME:-$HOME/.config}/sway/host.d/*.conf")'
 
 set $left h
 set $down j
@@ -39,6 +43,11 @@ workspace 7 output DP-3
 workspace 8 output DP-3
 workspace 9 output DP-3
 workspace 10 output DP-3
+
+gaps outer 4
+gaps inner 4
+default_border pixel 2
+corner_radius 12
 
 exec swayidle \
      timeout 36000 'swaylock -f -c 000000' \
