@@ -48,8 +48,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # go
 export PATH=":/usr/local/go/bin:$HOME/go/bin/:$PATH"
 
-
-
 # pnpm
 export PNPM_HOME="/home/lmas/.local/share/pnpm"
 case ":$PATH:" in
