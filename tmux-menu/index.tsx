@@ -18,6 +18,10 @@ const menuItems: MenuItem[] = [
   { name: "Create release", command: "~/dotfiles/lazygit/release.sh" },
   { name: "Reboot system", command: "reboot" },
   {
+    name: "Reboot on Windows",
+    command: "sudo grub2-reboot 'osprober-efi-2E0C-C336' && sudo reboot",
+  },
+  {
     name: "Restore database (skip migrations)",
     command: "yarn --cwd ~/dev/workspace/ restore-db:skip-migrations",
   },
