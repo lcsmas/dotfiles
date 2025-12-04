@@ -15,25 +15,24 @@ fi
 # GraphQL query to fetch triage tickets
 QUERY='
 {
-  issues(filter: { state: { name: { eq: "Triage" }}}, first: 50) {
+  issues(filter: { state: { name: { in: ["Triage", "In Progress"] }} labels : { name : { in: ["Other", "B2C", "B2B Cleaq", "B2B Mobile Club"] }}}, first: 50) {
     nodes {
       id
       identifier
       title
+      assignee {
+        name
+      }
       description
       url
       priority
-      createdAt
-      updatedAt
       state {
         name
       }
-      team {
-        name
-      }
-      assignee {
-        name
-        email
+      labels {
+        nodes {
+          name
+        }
       }
     }
   }
@@ -53,17 +52,20 @@ if echo "$RESPONSE" | jq -e '.errors' > /dev/null 2>&1; then
     exit 1
 fi
 
+# Sort by state name client-side (Triage before In Progress)
+SORTED_RESPONSE=$(echo "$RESPONSE" | jq '.data.issues.nodes |= sort_by(.state.name) | .data.issues.nodes |= reverse')
+
 # Save to file
-OUTPUT_FILE="$(dirname "$0")/triage-tickets.json"
-echo "$RESPONSE" | jq '.' > "$OUTPUT_FILE"
+OUTPUT_FILE="$(dirname "$0")/helptech-tickets.json"
+echo "$SORTED_RESPONSE" | jq '.' > "$OUTPUT_FILE"
 
 # Count tickets
-TICKET_COUNT=$(echo "$RESPONSE" | jq '.data.issues.nodes | length')
+TICKET_COUNT=$(echo "$SORTED_RESPONSE" | jq '.data.issues.nodes | length')
 
-echo "✓ Successfully fetched $TICKET_COUNT triage tickets"
+echo "✓ Successfully fetched $TICKET_COUNT helptech tickets"
 echo "✓ Saved to: $OUTPUT_FILE"
 
 # Display summary
 echo ""
 echo "Tickets:"
-echo "$RESPONSE" | jq -r '.data.issues.nodes[] | "  [\(.identifier)] \(.title)"'
+echo "$SORTED_RESPONSE" | jq -r '.data.issues.nodes[] | "  \(.state.name) - [\(.identifier)] \(.title)"' 

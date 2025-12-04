@@ -1,0 +1,215 @@
+{
+  "data": {
+    "issues": {
+      "nodes": [
+        {
+          "id": "3d45d1ae-9f94-402c-99f5-bc3ab140bce1",
+          "identifier": "MC-2155",
+          "title": "Bug de mise à jour des IMEI dans la commande B2C",
+          "assignee": null,
+          "description": "Envoi de **J’ai un bug** de @Sarah\n\n**QUI**\nCommande B2C 🟡\n[https://admin.mobile.club/orders/1318090](https://admin.mobile.club/orders/1318090)\n\n**QUOI**\n\\*Hello , ici le client a confondu les deux téls et nous a retourné l’appareil avec l’IMEI 354324415640552 alors qu’il est bien en possession de celui avec l’IMEI 350719119159722\n\nJe n’arrive pas à > Update the content pour associer correctement les deux IMEI possible de check please ? Merciii\\*\n\n**URGENCE**\n🐞**J’ai trouvé un bug**",
+          "url": "https://linear.app/mobile-club/issue/MC-2155/bug-de-mise-a-jour-des-imei-dans-la-commande-b2c",
+          "priority": 3,
+          "state": {
+            "name": "Triage"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c2c4d058-fa30-42b4-862d-cd4eaa9ded3f",
+          "identifier": "MC-2167",
+          "title": "Bug: Le BdR ne se génère pas pour la commande B2B",
+          "assignee": null,
+          "description": "Envoi de **J’ai un bug** de @Quentin TWG\n\n**QUI**\nCommande B2B 🟠 - Cleaq\nCITIZEN PLANE\n\n**QUOI**\n[*https://admin.mobile.club/orders/778886*](https://admin.mobile.club/orders/778886)*\nLe BdR ne se gènère pas \nLe SN semble OK car le statut iCloud s'actualise bien (*[*https://admin.mobile.club/stocks/items/489252)*](https://admin.mobile.club/stocks/items/489252)*)*\n\n**URGENCE**\n🐞**J’ai trouvé un bug**",
+          "url": "https://linear.app/mobile-club/issue/MC-2167/bug-le-bdr-ne-se-genere-pas-pour-la-commande-b2b",
+          "priority": 3,
+          "state": {
+            "name": "Triage"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2B Cleaq"
+              }
+            ]
+          }
+        },
+        {
+          "id": "3a7c711c-e6c1-4a24-83be-5c78a1bf1880",
+          "identifier": "MC-2170",
+          "title": "Vérifier le statut de documents pour cliente en attente",
+          "assignee": null,
+          "description": "Envoi de **J’ai un bug** de @Gafoure Tambadou\n\n**QUI**\nCommande B2C 🟡\n[https://admin.mobile.club/kyc/76992](https://admin.mobile.club/kyc/76992)\n\n**QUOI**\n**Hello, c’est le deuxième cas que je trouve. La cliente est toujours en waiting doc, mais elle a mis tous les documents nécessaires. Est ce que vous pouvez vérifier ce qu'il se passe s'il vous plait** 😊\n\n**URGENCE**\n🙋‍♀️ **J’ai besoin d’aide dès que possible**",
+          "url": "https://linear.app/mobile-club/issue/MC-2170/verifier-le-statut-de-documents-pour-cliente-en-attente",
+          "priority": 0,
+          "state": {
+            "name": "Triage"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1497072e-3021-4145-b959-29fe7d6fbaa9",
+          "identifier": "MC-1948",
+          "title": "Sélectionner un produit neuf pour un client retourné",
+          "assignee": {
+            "name": "Ahmad Moussa"
+          },
+          "description": "Envoi de **Limitation technique** de @Apolline\n\n**QUI**\nCommande B2C 🟡\n[**https://admin.mobile.club/orders/1390106**](https://admin.mobile.club/orders/1390106)\n\n**QUOI**\n*hello, le 357054889162802 neuf a été retourné à expéditeur.\nSi je passe une garantie pour livrer le client, avez-vous la possibilité de sélectionner un produit neuf pour le client please via \"to purchase\"?\nadresse à jour sur loop*\n\n**URGENCE**\n**Peu urgent**",
+          "url": "https://linear.app/mobile-club/issue/MC-1948/selectionner-un-produit-neuf-pour-un-client-retourne",
+          "priority": 4,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "40b84dcc-993e-4670-85ce-760cf899328b",
+          "identifier": "MC-2072",
+          "title": "Limite de 20 lignes par page dans la vue to purchase",
+          "assignee": {
+            "name": "Lucas Mas"
+          },
+          "description": "Envoi de **Limitation technique** de @Dinda\n\n**QUI**\nCommande B2C 🟡\n[**https://admin.mobile.club/purchases/to_purchase**](https://admin.mobile.club/purchases/to_purchase)\n\n**QUOI**\n*Hello,\nJe sais pas si ça a toujours été le cas mais on arrive pas à mettre plus de 20 lignes/page dans la vue to purchase. Normalement on pourra le faire en cliquant sur la liste déroulante?\nMerci*\n\n**URGENCE**\n**Peu urgent**",
+          "url": "https://linear.app/mobile-club/issue/MC-2072/limite-de-20-lignes-par-page-dans-la-vue-to-purchase",
+          "priority": 4,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              },
+              {
+                "name": "Bug"
+              }
+            ]
+          }
+        },
+        {
+          "id": "73cd446e-3085-4417-b3f1-11f2be512f22",
+          "identifier": "MC-2091",
+          "title": "Impossible de rafraîchir iCloud dans la commande B2C",
+          "assignee": {
+            "name": "Nicolas Duchon"
+          },
+          "description": "Envoi de **J’ai un bug** de @Louis TWG\n\n**QUI**\nCommande B2C 🟡\n[https://admin.mobile.club/orders/515734](https://admin.mobile.club/orders/515734)\n\n**QUOI**\n**refresh icloud impossible**\n\n**URGENCE**\n🐞**J’ai trouvé un bug**",
+          "url": "https://linear.app/mobile-club/issue/MC-2091/impossible-de-rafraichir-icloud-dans-la-commande-b2c",
+          "priority": 3,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "9b5cb12a-cc10-458d-abba-8175663b8cb5",
+          "identifier": "MC-2156",
+          "title": "Bug: Client peut swap sans bouton activé",
+          "assignee": {
+            "name": "Nans Brun Dumortier"
+          },
+          "description": "Envoi de **J’ai un bug** de @Louis TWG\n\n**QUI**\nCommande B2C 🟡\n[https://admin.mobile.club/orders/1441582](https://admin.mobile.club/orders/1441582)\n\n**QUOI**\n*Hello, le client a pu swap sans avoir le bouton activé\n(pour info, client historique qui swap très souvent, mais il fait la demande d'habitude, ce qui n'a pas été le cas ici)*\n\n**URGENCE**\n🐞**J’ai trouvé un bug**",
+          "url": "https://linear.app/mobile-club/issue/MC-2156/bug-client-peut-swap-sans-bouton-active",
+          "priority": 3,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "45e9833a-b39c-4265-82ec-ff7fd5892336",
+          "identifier": "MC-2164",
+          "title": "Créer ou réactiver un coupon urgent pour influenceur",
+          "assignee": {
+            "name": "Lucas Mas"
+          },
+          "description": "Envoi de **J’ai un bug** de @Lily Crevits\n\n**QUI**\n\nHello, possible de créer ce coupon ? assez urgent :) Il existait déjà donc le réactiver ou le créer je ne sais pas\n\nCoupon code : JUSTINEJBRFREE\nAmount : 192€\nDescription : code utilisation unique influenceur\nUsage limit : 1\nActive dates : 8/10/25 - 14/10/25\n\n**QUOI**\n\\*Hello, possible de créer ce coupon ? assez urgent :) Il existait déjà donc le réactiver ou le créer je ne sais pas\n\nCoupon code : JUSTINEJBRFREE\nAmount : 192€\nDescription : code utilisation unique influenceur\nUsage limit : 1\nActive dates : 8/10/25 - 14/10/25\\*\n\n**URGENCE**\n🙋‍♀️**🔥 J’ai besoin d’une aide immédiate**",
+          "url": "https://linear.app/mobile-club/issue/MC-2164/creer-ou-reactiver-un-coupon-urgent-pour-influenceur",
+          "priority": 2,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "84a78c0d-1113-447a-a5bb-d929c598771c",
+          "identifier": "MC-2165",
+          "title": "Impossible de générer le bdr malgré iCloud unlocked",
+          "assignee": {
+            "name": "Nans Brun Dumortier"
+          },
+          "description": "Envoi de **Limitation technique** de @Louis TWG\n\n**QUI**\nCommande B2C 🟡\n[**https://admin.mobile.club/orders/1126416**](https://admin.mobile.club/orders/1126416)\n\n**QUOI**\n**Hello, même souci qu'hier, impossible de générer le bdr malgré icloud unlocked, possible de check svp?​** 🙏\n\n**URGENCE**\n**Peu urgent**",
+          "url": "https://linear.app/mobile-club/issue/MC-2165/impossible-de-generer-le-bdr-malgre-icloud-unlocked",
+          "priority": 3,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "74c9404f-b333-4797-9682-328408007bf9",
+          "identifier": "MC-2166",
+          "title": "Lier le SN au device dans le système pour commande B2B",
+          "assignee": {
+            "name": "Nicolas Duchon"
+          },
+          "description": "Envoi de **Limitation technique** de @Quentin TWG\n\n**QUI**\nCommande B2B 🟠 - Cleaq\n**Ficha**\n\n**QUOI**\n\\*[https://admin.mobile.club/orders/1411079](https://admin.mobile.club/orders/1411079)\n\nUn DEVLAPAPP000075 (SN NFQ371V9WX) avait été envoyé hors système pour palier un retarde de livraison\n\nLes modifications ont été faites sur l'order mais si on recherche NFQ371V9WX  dans \"fleet\" on ne tombe pas dessus (le device est encore à TAMET dans le système)\n\nPouvez-vous lier le SN directement au device please ?\n\nMerci par avance\\*\n\n**URGENCE**\n**J’ai besoin d’aide dès que possible** 🙋‍♀️",
+          "url": "https://linear.app/mobile-club/issue/MC-2166/lier-le-sn-au-device-dans-le-systeme-pour-commande-b2b",
+          "priority": 3,
+          "state": {
+            "name": "In Progress"
+          },
+          "labels": {
+            "nodes": [
+              {
+                "name": "B2B Cleaq"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

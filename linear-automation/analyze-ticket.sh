@@ -1,8 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(dirname "$0")"
-TICKETS_FILE="$SCRIPT_DIR/triage-tickets.json"
-CONTEXT_FILE="$SCRIPT_DIR/current-ticket-context.md"
+TICKETS_FILE="$SCRIPT_DIR/helptech-tickets.json"
 
 # Fetch latest tickets
 echo "Fetching latest triage tickets..."
@@ -16,16 +15,30 @@ fi
 # Check if tickets exist
 TICKET_COUNT=$(jq '.data.issues.nodes | length' "$TICKETS_FILE")
 if [ "$TICKET_COUNT" -eq 0 ]; then
-    echo "No triage tickets found."
+    echo "No helptech tickets found."
     exit 0
 fi
 
 echo ""
-echo "Available Triage Tickets:"
+echo "Available HelpTech Tickets:"
 echo "========================="
 
 # Display tickets with numbers
-jq -r '.data.issues.nodes | to_entries[] | "\(.key + 1). [\(.value.identifier)] \(.value.title)\n   Priority: \(.value.priority) | Team: \(.value.team.name)"' "$TICKETS_FILE"
+jq -r '.data.issues.nodes | to_entries[] |
+  (if .value.priority >= 4 then "\u001b[41mPriority: \(.value.priority)\u001b[0m" else "Priority: \(.value.priority)" end) as $priority |
+  (if .value.state.name == "In Progress" then "\u001b[48;5;28m\(.value.state.name)\u001b[0m" elif .value.state.name == "Triage" then "\u001b[43m\u001b[30m\(.value.state.name)\u001b[0m" else "\(.value.state.name)" end) as $state |
+  (.value.labels.nodes | map(
+    if .name == "B2C" then "\u001b[44m\u001b[30m\(.name)\u001b[0m"
+    elif .name == "B2B Cleaq" then "\u001b[45m\u001b[30m\(.name)\u001b[0m"
+    elif .name == "B2B Mobile Club" then "\u001b[46m\u001b[30m\(.name)\u001b[0m"
+    elif .name == "Other" then "\u001b[47m\u001b[30m\(.name)\u001b[0m"
+    elif .name == "Bug" then "\u001b[100m\(.name)\u001b[0m"
+    else .name
+    end
+  ) | join(" ")) as $labels |
+  (if .value.assignee.name then "\u001b[36m\(.value.assignee.name)\u001b[0m" else "\u001b[33mNo assignee\u001b[0m" end) as $assignee |
+  "\(.key + 1) | [\(.value.identifier)] \(.value.title) | \($priority) | \($state) | \($labels) | \($assignee)"
+' "$TICKETS_FILE" | column -t -s '|'
 
 echo ""
 read -p "Enter ticket number to analyze (or 'q' to quit): " SELECTION
@@ -54,18 +67,14 @@ PRIORITY=$(echo "$TICKET" | jq -r '.priority')
 TEAM=$(echo "$TICKET" | jq -r '.team.name')
 STATE=$(echo "$TICKET" | jq -r '.state.name')
 
-# Create context file
-cat > "$CONTEXT_FILE" << EOF
-# Linear Ticket Analysis
+# Create context prompt
+PROMPT="Solve this HelpTech ticket: 
 
-## Ticket: $IDENTIFIER - $TITLE
+[$IDENTIFIER] $TITLE
 
 **URL:** $URL
-**Team:** $TEAM
-**State:** $STATE
 **Priority:** $PRIORITY
-
----
+**State:** $STATE
 
 ## Description
 
@@ -73,24 +82,12 @@ $DESCRIPTION
 
 ---
 
-## Task
-
-Please analyze this ticket and provide:
-
-1. **Problem Summary**: Brief overview of the issue
-2. **Potential Root Causes**: What might be causing this issue
-3. **Proposed Solution**: Recommended approach to solve this
-4. **Implementation Steps**: High-level steps to implement the solution
-5. **Testing Considerations**: What should be tested
-6. **Potential Risks**: Any concerns or edge cases
-
-EOF
+**IMPORTANT:** Follow the HelpTech guidelines in ~/.claude/CLAUDE.md. Always try to replicate the bug before attempting a fix."
 
 echo ""
-echo "✓ Ticket context saved to: $CONTEXT_FILE"
+echo "✓ Starting Claude Code to solve ticket $IDENTIFIER..."
 echo ""
-echo "You can now ask Claude Code to analyze this ticket:"
-echo "  'Analyze the ticket in $CONTEXT_FILE and provide a solution'"
-echo ""
-echo "Or open the file directly:"
-echo "  cat $CONTEXT_FILE"
+
+# Change to workspace directory and launch Claude Code with the prompt in planning mode
+cd /home/lmas/dev/workspace
+claude --permission-mode plan "$PROMPT"
