@@ -1,7 +1,0 @@
-[x] check if dnf tmux version is 3.5a
-	[x] if not install it from source 
-	[x] verify ~/.tmux owner is current user, else : sudo chown -R $(whoami):$(whoami) ~/.tmux
-[x] install tmux-sessionizer
-[x] install tpm (tmux plugin manager) : download tarball, extract (follow tpm installation doc)
-[x] check ~/.bashrc
-[x] check wsl specific in ~/.zshrc
