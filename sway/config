@@ -47,7 +47,7 @@ workspace 10 output DP-3
 gaps outer 4
 gaps inner 4
 default_border pixel 2
-corner_radius 12
+#corner_radius 12
 
 exec swayidle \
      timeout 36000 'swaylock -f -c 000000' \
