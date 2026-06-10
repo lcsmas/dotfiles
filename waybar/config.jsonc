@@ -64,6 +64,6 @@
         "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠", 
-	      "on-click": "nmcli device wifi list",
+	      "on-click": "foot --app-id=nmtui nmtui",
 	},
 }
