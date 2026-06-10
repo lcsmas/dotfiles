@@ -108,3 +108,13 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-vi-mode" ]; then
 	git clone https://github.com/jeffreytse/zsh-vi-mode "$ZSH_PLUGINS_DIR/zsh-vi-mode"
 fi
 
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting"
+fi
+
+if [ ! -d "$ZSH_PLUGINS_DIR/fzf-tab" ]; then
+	git clone https://github.com/Aloxaf/fzf-tab "$ZSH_PLUGINS_DIR/fzf-tab"
+fi
+
+## Install Bun
+curl -fsSL https://bun.com/install | bash
