@@ -11,6 +11,3 @@ linear-automation/.env
 .zsh_secret
 *.key
 key.txt
-
-# Claude runtime config (contains tokens + runtime data)
-.claude/.claude.json

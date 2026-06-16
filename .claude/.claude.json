@@ -1,0 +1,2174 @@
+{
+  "numStartups": 1704,
+  "installMethod": "native",
+  "autoUpdates": false,
+  "editorMode": "vim",
+  "hasSeenTasksHint": true,
+  "customApiKeyResponses": {
+    "approved": [
+      "wIXei658hZQ-xWUNSgAA",
+      "sMqOGP6hhYw-QZtMIQAA"
+    ],
+    "rejected": []
+  },
+  "tipsHistory": {
+    "new-user-warmup": 9,
+    "plan-mode-for-complex-tasks": 1689,
+    "terminal-setup": 1,
+    "memory-command": 32,
+    "theme-command": 1685,
+    "status-line": 1,
+    "prompt-queue": 169,
+    "enter-to-steer-in-relatime": 1689,
+    "todo-list": 1704,
+    "ide-upsell-external-terminal": 1689,
+    "# for memory": 249,
+    "install-github-app": 1689,
+    "drag-and-drop-images": 1697,
+    "double-esc": 28,
+    "continue": 1698,
+    "shift-tab": 1698,
+    "image-paste": 1686,
+    "shift-enter": 1704,
+    "custom-agents": 1143,
+    "permissions": 1697,
+    "custom-commands": 1143,
+    "double-esc-code-restore": 1697,
+    "tab-toggle-thinking": 251,
+    "ultrathink-keyword": 263,
+    "git-worktrees": 1671,
+    "stickers-command": 264,
+    "default-permission-mode-config": 1699,
+    "frontend-design-plugin": 1698,
+    "rename-conversation": 1698,
+    "config-thinking-mode": 254,
+    "web-app": 1699,
+    "mobile-app": 364,
+    "guest-passes": 1703,
+    "install-slack-app": 1689,
+    "btw-side-question": 258,
+    "agent-flag": 1698,
+    "feedback-command": 1686,
+    "color-when-multi-clauding": 1703,
+    "voice-mode": 1703,
+    "remote-control": 1686,
+    "colorterm-truecolor": 1689,
+    "loop-command-nudge": 1556,
+    "team-onboarding-share": 1266,
+    "fotw-campaign-upsell": 1557,
+    "agents-view-multiclauding": 1663
+  },
+  "memoryUsageCount": 2,
+  "promptQueueUseCount": 363,
+  "btwUseCount": 9,
+  "cachedDynamicConfigs": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    },
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    }
+  },
+  "cachedGrowthBookFeatures": {
+    "tengu_sessions_elevated_auth_enforcement": true,
+    "tengu_system_prompt_global_cache": true,
+    "tengu_copper_wren": false,
+    "claude_code_skills_dashboard_enabled_cli": false,
+    "tengu_bridge_poll_interval_ms": 0,
+    "tengu_ladder_mq7": false,
+    "tengu_classifier_summary_heuristic_emit": true,
+    "tengu_bg_attach_stall_ms": 5000,
+    "tengu_tool_pear": false,
+    "tengu_version_config": {
+      "minVersion": "1.0.24"
+    },
+    "tengu_ccr_bridge_multi_session": true,
+    "tengu_ccr_bundle_seed_enabled": true,
+    "tengu_birch_kettle": false,
+    "tengu_read_dedup_killswitch": false,
+    "tengu_slate_ribbon": true,
+    "tengu_surreal_dali": true,
+    "tengu_malort_pedway": {
+      "enabled": true,
+      "pixelValidation": false,
+      "clipboardPasteMultiline": true,
+      "screenshotFilter": true,
+      "mouseAnimation": true,
+      "hideBeforeAction": true,
+      "autoTargetDisplay": false,
+      "coordinateMode": "pixels"
+    },
+    "tengu_amber_sextant": true,
+    "tengu_keybinding_customization_release": true,
+    "tengu_saffron_anchor": true,
+    "tengu_velvet_moth": 0.2,
+    "tengu_blue_coaster": false,
+    "tengu_loggia_carousel": false,
+    "tengu_passport_quail": false,
+    "tengu_silk_hinge": false,
+    "tengu_permission_friction": true,
+    "tengu_saffron_lattice": {
+      "enabled": false,
+      "planLimitsEndDate": "2026-06-22T10:00:00Z",
+      "hideRateLimitsDescription": true
+    },
+    "tengu_otk_slot_v1": false,
+    "tengu_slate_meadow": true,
+    "tengu_mcp_elicitation": true,
+    "tengu_bridge_requires_action_details": true,
+    "tengu_mocha_barista": true,
+    "tengu_loud_sugary_rock": false,
+    "tengu_tide_elm": "off",
+    "tengu_miraculo_the_bard": false,
+    "tengu_ember_trail": "0",
+    "tengu_canary": {},
+    "tengu_cobalt_lantern": true,
+    "tengu_team_discovery": false,
+    "tengu_porch_bell_9f": "",
+    "tengu_pewter_kestrel": {
+      "global": 50000,
+      "Bash": 30000,
+      "PowerShell": 30000,
+      "Grep": 20000,
+      "Snip": 1000,
+      "StrReplaceBasedEditTool": 30000,
+      "BashSearchTool": 20000
+    },
+    "tengu-top-of-feed-tip": {
+      "tip": "Claude Fable 5 is currently unavailable. Please use Opus 4.8 or another available model. Learn more: https://www.anthropic.com/news/fable-mythos-access",
+      "color": "warning"
+    },
+    "tengu_workflows_enabled": true,
+    "tengu_harbor_willow": false,
+    "tengu_idle_amber_finch": false,
+    "tengu_dunwich_bell": false,
+    "tengu_slate_harbor_experiment": false,
+    "tengu_pewter_summit": true,
+    "tengu_basalt_meadow": true,
+    "tengu_mcp_local_oauth_blocked_hosts": {
+      "hosts": [
+        "microsoft365.mcp.claude.com",
+        "gmail.mcp.claude.com",
+        "gcal.mcp.claude.com"
+      ]
+    },
+    "tengu_prompt_suggestion": true,
+    "tengu_malformed_tool_use_clean_retry": false,
+    "tengu_auto_mode_config": {
+      "enabled": "enabled",
+      "twoStageClassifier": true
+    },
+    "tengu_vscode_feedback_survey": true,
+    "tengu_prompt_cache_diagnostics": true,
+    "tengu_claudeai_mcp_connectors": true,
+    "tengu_vscode_onboarding": false,
+    "tengu_bad_survey_transcript_ask_config": {
+      "probability": 1
+    },
+    "tengu_slate_harrier": "compact",
+    "tengu_auto_mode_default_on": false,
+    "tengu_sm_config": {
+      "minimumMessageTokensToInit": 150000,
+      "minimumTokensBetweenUpdate": 40000,
+      "toolCallsBetweenUpdates": 10
+    },
+    "tengu_code_diff_cli": true,
+    "tengu_amber_lynx": false,
+    "tengu_cobalt_thicket": false,
+    "tengu_crystal_beam": {
+      "budgetTokens": 0
+    },
+    "tengu_crimson_echo": {},
+    "tengu_streaming_tool_execution2": true,
+    "tengu_red_coaster": false,
+    "tengu_hazel_osprey_floor": 75000,
+    "tengu_workout2": true,
+    "tengu_slate_wren": false,
+    "tengu_doorbell_agave": false,
+    "tengu_maple_pier": false,
+    "tengu_nimble_amber_prose": false,
+    "tengu_flax_grouse": false,
+    "tengu_classifier_disabled_surfaces": "",
+    "tengu_birthday_hat": false,
+    "tengu_vellum_lantern": false,
+    "tengu_tussock_oriole": false,
+    "tengu_grey_step2": {
+      "enabled": true,
+      "dialogTitle": "We recommend medium effort for Opus",
+      "dialogDescription": "Effort determines how long Claude thinks for when completing your task. We recommend medium effort for most tasks to balance speed and intelligence and maximize rate limits. Use ultrathink to trigger high effort when needed."
+    },
+    "tengu_hawthorn_window": 200000,
+    "tengu_classifier_summary_llm_emit": true,
+    "tengu_react_vulnerability_warning": false,
+    "tengu_feedback_survey_config": {
+      "minTimeBeforeFeedbackMs": 600000,
+      "minTimeBetweenFeedbackMs": 43200000,
+      "minTimeBetweenGlobalFeedbackMs": 43200000,
+      "minUserTurnsBeforeFeedback": 5,
+      "minUserTurnsBetweenFeedback": 25,
+      "hideThanksAfterMs": 3000,
+      "onForModels": [
+        "*"
+      ],
+      "probability": 0.05
+    },
+    "tengu_gleaming_fair": true,
+    "tengu_lapis_thicket": false,
+    "tengu_flint_harbor": false,
+    "tengu_event_watchdog_default_on": false,
+    "tengu_amber_lattice": {
+      "plugins": [
+        "security-guidance",
+        "code-review",
+        "commit-commands",
+        "code-simplifier",
+        "hookify",
+        "feature-dev",
+        "frontend-design",
+        "pr-review-toolkit",
+        "skill-creator",
+        "plugin-dev",
+        "agent-sdk-dev",
+        "mcp-server-dev",
+        "claude-code-setup",
+        "claude-md-management",
+        "playground",
+        "ralph-loop",
+        "explanatory-output-style",
+        "learning-output-style",
+        "clangd-lsp",
+        "csharp-lsp",
+        "gopls-lsp",
+        "jdtls-lsp",
+        "kotlin-lsp",
+        "lua-lsp",
+        "php-lsp",
+        "pyright-lsp",
+        "ruby-lsp",
+        "rust-analyzer-lsp",
+        "swift-lsp",
+        "typescript-lsp"
+      ]
+    },
+    "tengu_scarf_coffee": false,
+    "tengu_slate_finch": false,
+    "tengu_copper_thistle": false,
+    "tengu_quiet_harbor": false,
+    "tengu_willow_mode": "hint_v2",
+    "tengu_mcp_subagent_prompt": false,
+    "tengu_amber_rokovoko": 0.2,
+    "tengu_flint_harbor_prompt": {
+      "prompt": "You are helping a power user generate an onboarding guide for teammates who are new to Claude Code. The guide will live in the team's onboarding docs and can be pasted into Claude for an interactive walkthrough.\n\nYou're co-authoring this with them — collaborative and helpful, like a teammate who's done this before and is happy to share.\n\n## Usage data (last {{WINDOW_DAYS}} days)\n\nThis was scanned from the guide creator's local Claude Code transcripts:\n\n```json\n{{USAGE_DATA}}\n```\n\n## Your task\n\nBefore anything else — including before thinking through the classification — output exactly this line as your first visible text:\n\n> Looking at how you've used Claude over the last {{WINDOW_DAYS}} days to put together an onboarding guide for teammates new to Claude Code.\n\nThis must come before any extended thinking about session descriptors. The guide creator is staring at a blank screen until you do. Classification is step 2, not step 1.\n\nGenerate the guide immediately, then ask for revisions. Don't wait for answers first — it's easier for the guide creator to edit a concrete draft than answer abstract questions.\n\n1. **Output the acknowledgment line above.** No thinking, no classification, no tool calls before this. One line, then move on.\n\n2. **Derive the work-type breakdown.** Read the `sessionDescriptors` array — each entry describes one session via its title, any linked code reviews (`prNumbers`), and first user message. Classify each session into one of these task types:\n\n   - **build_feature** — new functionality, scripts, tools, config/CI/env setup\n   - **debug_fix** — investigating and fixing bugs\n   - **improve_quality** — refactoring, tests, cleanup, code review\n   - **analyze_data** — queries, metrics, number crunching\n   - **plan_design** — architecture, approach, strategy, understanding unfamiliar code, design review\n   - **prototype** — spikes, POCs, throwaway exploration\n   - **write_docs** — PRDs, RFCs, READMEs, design docs, copy/doc review\n\n   Categories describe the *type of task*, not the project or domain — a teammate on any project should recognize them. Review sessions belong with whatever's being reviewed: code review is improve_quality, doc review is write_docs, design review is plan_design. Most sessions fit the list; only invent a new category if it's genuinely a different type of task. Pick the top 3-5 with rough percentages. First messages alone are usually enough; titles and code-review links are enrichment. If first messages are uninformative, use tool and MCP counts as a weak hint. If there are ~0 sessions, leave the breakdown as a TODO.\n\n   In the rendered guide, display categories with spaces and title case (e.g. \"Build Feature\" not \"build_feature\").\n\n3. **Gather the remaining pieces.** For repos, start with `currentRepo` and check the workspace for sibling repo directories. For MCP server setup, use each entry's `name` (and `urlOrigin` where present) to infer what the server does and how a teammate would get access. Leave the Team Tips and Get Started sections as TODO placeholders — you'll ask for these in Review and fill them in after.\n\n4. **Write the guide to `ONBOARDING.md`** following this template:\n\n```\n{{GUIDE_TEMPLATE}}\n```\n\n   Fill in real numbers from the usage data (not placeholders). Use `generatedBy` for the name; if it's missing, omit the name. Ascii bar charts: `█` for filled, `░` for empty, 20 chars wide. Keep the HTML comment instruction at the bottom exactly as shown.\n\n5. **Render the guide in a code block, then close out the first turn.** You're co-authoring this guide with the guide creator — frame the follow-up as collaboration, not corrections.\n\n   After the code block, add a `---` horizontal rule and a `**Review**` heading so the guide is visually separated from your questions. Under the heading, number these three questions:\n\n   1. \"I went with '[X]' for the team name — let me know if that sounds right.\" (or if you couldn't tell: \"What's the team name? I'll add it in.\")\n   2. Is there a starter task for someone new to Claude Code? (ticket or doc link — optional)\n   3. Any team tips you'd tell a new teammate that aren't already in CLAUDE.md?\n\n   After they answer, update `ONBOARDING.md` with their team name, tips, and starter task. Then close with this exact line (not numbered, not paraphrased):\n\n   Saved to `ONBOARDING.md`. Drop it in your team docs and channels — when a new teammate pastes it into Claude Code, they get a guided onboarding tour from there.\n\n   Apply any edits they come back with to the file.",
+      "guideTemplate": "# Welcome to [Team Name]\n\n## How We Use Claude\n\nBased on [name]'s usage over the last [N] days:\n\nWork Type Breakdown:\n  [Category 1]  [ascii bar]  [N]%\n  [Category 2]  [ascii bar]  [N]%\n  [Category 3]  [ascii bar]  [N]%\n  ...\n\nTop Skills & Commands:\n  [/command]  [ascii bar]  [N]x/month\n  ...\n\nTop MCP Servers:\n  [Server]  [ascii bar]  [N] calls\n  ...\n\n## Your Setup Checklist\n\n### Codebases\n- [ ] [repo-name] — [repo url]\n...\n\n### MCP Servers to Activate\n- [ ] [Server] — [what it's for]. [How to get access]\n...\n\n### Skills to Know About\n- [/command] — [what it does, when the team uses it]\n...\n\n## Team Tips\n\n_TODO_\n\n## Get Started\n\n_TODO_\n\n<!-- INSTRUCTION FOR CLAUDE: A new teammate just pasted this guide for how the\nteam uses Claude Code. You're their onboarding buddy — warm, conversational,\nnot lecture-y.\n\nOpen with a warm welcome — include the team name from the title. Then: \"Your\nteammate uses Claude Code for [list all the work types]. Let's get you started.\"\n\nCheck what's already in place against everything under Setup Checklist\n(including skills), using markdown checkboxes — [x] done, [ ] not yet. Lead\nwith what they already have. One sentence per item, all in one message.\n\nTell them you'll help with setup, cover the actionable team tips, then the\nstarter task (if there is one). Offer to start with the first unchecked item,\nget their go-ahead, then work through the rest one by one.\n\nAfter setup, walk them through the remaining sections — offer to help where you\ncan (e.g. link to channels), and just surface the purely informational bits.\n\nDon't invent sections or summaries that aren't in the guide. The stats are the\nguide creator's personal usage data — don't extrapolate them into a \"team\nworkflow\" narrative. -->",
+      "windowDays": 30
+    },
+    "tengu_walnut_prism": false,
+    "tengu_lantern_spool": false,
+    "tengu_snippet_save": false,
+    "tengu_herring_clock": false,
+    "tengu_velvet_cascade": {},
+    "tengu_harbor_ledger": [
+      {
+        "marketplace": "claude-plugins-official",
+        "plugin": "discord"
+      },
+      {
+        "marketplace": "claude-plugins-official",
+        "plugin": "telegram"
+      },
+      {
+        "marketplace": "claude-plugins-official",
+        "plugin": "fakechat"
+      },
+      {
+        "marketplace": "claude-plugins-official",
+        "plugin": "imessage"
+      }
+    ],
+    "tengu_turtle_carbon": true,
+    "tengu_bridge_min_version": {
+      "minVersion": "2.1.70"
+    },
+    "tengu_lapis_finch": true,
+    "tengu_billiard_aviary": false,
+    "tengu_coral_beacon": true,
+    "tengu_quiet_slate_wren": false,
+    "tengu_ccr_bridge": true,
+    "tengu_maple_tide": false,
+    "tengu_kairos_push_notifications": true,
+    "tengu_lichen_compass": false,
+    "tengu_kairos_loop_prompt": true,
+    "tengu_ccr_v2_send_events_cli": true,
+    "tengu_destructive_command_warning": false,
+    "tengu_gouda_loop": true,
+    "tengu_sedge_lantern_holdback": false,
+    "tengu_ochre_hollow": false,
+    "tengu_plugin_official_mkt_git_fallback": true,
+    "tengu_cedar_hollow_7m": {},
+    "tengu_amber_wren": {
+      "targetedRangeNudge": true,
+      "maxTokens": 25000
+    },
+    "tengu_amber_sentinel": true,
+    "tengu_basalt_sundial": false,
+    "tengu_pewter_brook": false,
+    "tengu_flint_harbor_share": false,
+    "tengu_frond_boric": {},
+    "tengu_osprey_lantern": false,
+    "tengu_olive_hinge": "",
+    "tengu_prompt_cache_1h_config": {
+      "allowlist": [
+        "repl_main_thread*",
+        "sdk",
+        "auto_mode",
+        "rolling_compact",
+        "memdir_relevance",
+        "agent_classifier",
+        "prompt_suggestion",
+        "away_summary",
+        "extract_memories",
+        "compact"
+      ]
+    },
+    "tengu_reactive_compact_remote": false,
+    "tengu_fennel_kite_model": "",
+    "tengu_fgts": true,
+    "tengu_sepia_cormorant": [],
+    "tengu_shale_finch": true,
+    "tengu_auto_notice_once": true,
+    "tengu_fennel_kite": false,
+    "tengu_neapolitan": true,
+    "tengu_crimson_vector": false,
+    "tengu_vellum_siding": false,
+    "tengu_marble_lark": false,
+    "tengu_scratch": false,
+    "tengu_ultraplan_prompt_identifier": "visual_plan",
+    "tengu_harbor_permissions": true,
+    "tengu_walrus_canteen": false,
+    "tengu_mcp_retry_failed_remote": false,
+    "tengu_chomp_inflection": true,
+    "tengu-off-switch": {
+      "activated": false
+    },
+    "tengu_swann_brevity": "focused",
+    "tengu_marble_whisper2": true,
+    "tengu_worktree_mode": true,
+    "tengu_collage_kaleidoscope": true,
+    "tengu_cinder_almanac": true,
+    "tengu_desktop_upsell_v2": {
+      "enabled": false
+    },
+    "tengu_mint_lanes": false,
+    "tengu_lilac_loom": {},
+    "tengu_slate_moth": false,
+    "tengu_amber_anchor": false,
+    "tengu_mcp_singleton_unwrap": true,
+    "tengu_chair_sermon": false,
+    "tengu_cobalt_wren": false,
+    "tengu_moth_copse": false,
+    "tengu_cobalt_compass": true,
+    "tengu_tern_alloy": "copy_a",
+    "tengu_cobalt_heron": false,
+    "tengu_noreread_q7m_velvet": false,
+    "tengu_slate_kestrel": true,
+    "tengu_ember_latch": true,
+    "tengu_basalt_spur": false,
+    "tengu_skills_dashboard_enabled": false,
+    "tengu_slate_thimble": false,
+    "tengu_post_compact_survey": false,
+    "tengu_timber_lark": "copy_a",
+    "tengu_mcp_stateless_skip_init": true,
+    "tengu_willow_refresh_ttl_hours": 0,
+    "tengu_plank_river_frost": "user_intent",
+    "tengu_ccr_post_turn_summary": false,
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 10000,
+      "maxExportBatchSize": 400,
+      "maxQueueSize": 8192,
+      "path": "/api/event_logging/v2/batch"
+    },
+    "tengu_sub_nomdrep_q7k": true,
+    "tengu_amber_redwood2": "",
+    "tengu_file_write_optimization": true,
+    "tengu_tangerine_ladder_boost": true,
+    "tengu_orchid_mantis": false,
+    "tengu_sage_compass": {},
+    "tengu_quiet_basalt_echo": false,
+    "tengu_marble_sandcastle": false,
+    "tengu_hawthorn_steeple": false,
+    "tengu_desktop_upsell": {
+      "enable_shortcut_tip": true,
+      "enable_startup_dialog": false
+    },
+    "tengu-fable-off-switch": {
+      "activated": false
+    },
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu_harbor_prism": true,
+    "tengu_copper_fox": false,
+    "tengu_dune_wren": false,
+    "tengu_pewter_ledger": "OFF",
+    "tengu_bridge_repl_v2_config": {
+      "init_retry_max_attempts": 3,
+      "init_retry_base_delay_ms": 500,
+      "init_retry_jitter_fraction": 0.25,
+      "init_retry_max_delay_ms": 4000,
+      "http_timeout_ms": 10000,
+      "uuid_dedup_buffer_size": 2000,
+      "heartbeat_interval_ms": 20000,
+      "heartbeat_jitter_fraction": 0.1,
+      "token_refresh_buffer_ms": 600000,
+      "teardown_archive_timeout_ms": 1500,
+      "connect_timeout_ms": 15000,
+      "min_version": "2.1.70",
+      "should_show_app_upgrade_message": false
+    },
+    "tengu_kestrel_arch": "OFF",
+    "tengu_jade_anvil_4": false,
+    "tengu_garnet_finch": false,
+    "tengu_slate_siskin": {
+      "enabled": false,
+      "timeoutMs": 8000,
+      "throttleMs": 30000,
+      "summaryLineThreshold": 5
+    },
+    "tengu_cobalt_plinth": false,
+    "tengu_orchid_trellis": false,
+    "tengu_ultraplan_config": {
+      "enabled": true
+    },
+    "tengu_sepia_moth": false,
+    "tengu_brick_follow": false,
+    "tengu_slate_nexus": true,
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_gypsum_kite": false,
+    "tengu_willow_census_ttl_hours": 24,
+    "tengu_coral_fern": false,
+    "tengu_umber_petrel": false,
+    "tengu_gha_plugin_code_review": false,
+    "tengu_bramble_lintel": 7,
+    "tengu_kairos_cron": true,
+    "tengu_velvet_ibis": {},
+    "tengu_immediate_model_command": false,
+    "tengu_ccr_bundle_max_bytes": 104857600,
+    "tengu_birch_compass": true,
+    "tengu_feature_template": false,
+    "tengu_quartz_vireo": "",
+    "tengu_kairos_loop_dynamic": true,
+    "tengu_lapis_anchor": "off",
+    "tengu_ashen_kelp": true,
+    "tengu_compact_cache_prefix": true,
+    "tengu_amber_lark": false,
+    "tengu_sage_compass2": {
+      "enabled": true
+    },
+    "tengu_orchid_mantis_v2": false,
+    "tengu_log_datadog_events": true,
+    "tengu_sedge_lantern": true,
+    "tengu_copper_bridge": true,
+    "tengu_anchor_tide": true,
+    "tengu_hazel_osprey": false,
+    "tengu_bridge_poll_interval_config": {
+      "poll_interval_ms_not_at_capacity": 2000,
+      "poll_interval_ms_at_capacity": 600000,
+      "heartbeat_interval_ms": 0,
+      "multisession_poll_interval_ms_not_at_capacity": 5000,
+      "multisession_poll_interval_ms_at_capacity": 60000,
+      "multisession_poll_interval_ms_partial_capacity": 5000,
+      "non_exclusive_heartbeat_interval_ms": 180000,
+      "session_keepalive_interval_ms": 0,
+      "session_keepalive_interval_v2_ms": 0
+    },
+    "tengu_bridge_attestation_enforce_config": {
+      "accept_level": "VERIFIED_BY_GATE",
+      "accept_statuses": []
+    },
+    "tengu_trace_lantern": false,
+    "tengu_compass_dial": true,
+    "tengu_cedar_sundial": false,
+    "tengu_cork_lantern": false,
+    "tengu_harbor": true,
+    "tengu_amber_prism": true,
+    "tengu_event_sampling_config": {},
+    "tengu_negative_interaction_transcript_ask_config": {
+      "probability": 0
+    },
+    "tengu_cobalt_raccoon": true,
+    "tengu_tool_search_unsupported_models": [
+      "claude-3-5-haiku",
+      "claude-3-haiku"
+    ],
+    "tengu_xterm_atlas_reset": true,
+    "tengu_silent_harbor": false,
+    "tengu_agent_list_attach": true,
+    "tengu_session_memory": false,
+    "tengu_onyx_plover": {
+      "enabled": false,
+      "minHours": 24,
+      "minSessions": 3,
+      "remoteEnabled": false
+    },
+    "tengu_ultraplan_timeout_seconds": 5400,
+    "tengu_prism_ledger": false,
+    "tengu-model-error-overrides": {
+      "claude-fable-5": {
+        "block": "Claude Fable 5 is currently unavailable. Learn more: https://www.anthropic.com/news/fable-mythos-access"
+      }
+    },
+    "tengu_penguin_mode_promo": {
+      "discountPercent": 0,
+      "endDate": "Feb 16"
+    },
+    "tengu_cobalt_ridge": true,
+    "tengu_fg_left_arrow_agents": true,
+    "tengu_startup_notice": "",
+    "tengu_moss_anchor": false,
+    "tengu_cedar_plume": false,
+    "tengu_pewter_lark": "off",
+    "tengu_chert_bezel": true,
+    "tengu_satin_quoll": {},
+    "tengu_slim_subagent_claudemd": true,
+    "tengu_good_survey_transcript_ask_config": {
+      "probability": 0.5
+    },
+    "tengu_pewter_lantern": false,
+    "tengu_drift_lantern": false,
+    "tengu_marble_whisper": true,
+    "tengu_byte_stream_idle_timeout_ms": 180000,
+    "tengu_steady_lantern": false,
+    "tengu_vscode_review_upsell": false,
+    "tengu_bridge_repl_v2": true,
+    "tengu_kairos_input_needed_push": true,
+    "tengu_sotto_voce": true,
+    "tengu_alder_compass": true,
+    "tengu_orford_ness": false,
+    "tengu_maple_sundial": false,
+    "tengu_native_cursor": true,
+    "tengu_kairos_cron_durable": false,
+    "tengu_cedar_halo": false,
+    "tengu_marble_anvil": true,
+    "tengu_cobalt_harbor": false,
+    "tengu_review_bughunter_config": {
+      "fleet_size": 5,
+      "max_duration_minutes": 10,
+      "agent_timeout_seconds": 600,
+      "total_wallclock_minutes": 22,
+      "model": "claude-opus-4-7",
+      "cost_note": "$5-$25",
+      "duration_note": "~5-10 min",
+      "enabled": true
+    },
+    "tengu_plum_vx3": true,
+    "tengu_amber_flint": true,
+    "tengu_cedar_inlet": "step",
+    "tengu_amber_heron": false,
+    "tengu_cork_m4q": true,
+    "tengu_cinder_plover": "",
+    "tengu_cloth_snorkel": false,
+    "tengu_bridge_attestation_enforce": false,
+    "tengu_willow_sentinel_ttl_hours": 1,
+    "tengu_penguins_enabled": true,
+    "tengu_sparrow_ledger": false,
+    "tengu_max_version_config": {},
+    "tengu_quartz_heron": false,
+    "tengu_cedar_lantern": true,
+    "tengu_shining_fractals": false,
+    "tengu_c4e_slash_upsell": true,
+    "tengu_velvet_hammer_sonnet": false,
+    "tengu_slate_quill": true,
+    "tengu_velvet_mallet_opus": false,
+    "tengu_basalt_tern": false,
+    "tengu_chrome_auto_enable": false,
+    "tengu_velvet_mallet_sonnet": false,
+    "tengu_quill_harbor": "acceptEdits",
+    "tengu_velvet_mallet_haiku_4_5": false,
+    "tengu_velvet_mallet": false,
+    "tengu_velvet_hammer_haiku_4_5": false,
+    "tengu_soft_slate_nudge": "baseline",
+    "tengu_velvet_mallet_haiku": false,
+    "tengu_velvet_hammer_falcon": false,
+    "tengu_velvet_hammer": false,
+    "tengu_velvet_hammer_sonnet_4_5": false,
+    "tengu_feature_claudified_template": false,
+    "tengu_windows_credman": false,
+    "tengu_velvet_static": true,
+    "tengu_velvet_mallet_sonnet_4_5": false,
+    "tengu_velvet_mallet_falcon": false,
+    "tengu_tab_read_sep": false,
+    "tengu_ax_screen_reader": true,
+    "tengu_velvet_hammer_opus": false,
+    "tengu_velvet_hammer_haiku": false,
+    "tengu_lantern_hearth": "off",
+    "tengu_loud_sugary_rock2": false
+  },
+  "cachedStatsigGates": {
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_use_file_checkpoints": true,
+    "tengu_tool_pear": false,
+    "tengu_migrate_ignore_patterns": false,
+    "tengu_halloween": false,
+    "tengu_glob_with_rg": false,
+    "tengu_web_tasks": true,
+    "tengu_log_1p_events": true,
+    "tengu_enable_versioned_plugins": false,
+    "code_slack_app_install_banner": false,
+    "tengu_sumi": false,
+    "tengu_react_vulnerability_warning": false,
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu_thinkback": false,
+    "tengu_ant_attribution_header_new": true,
+    "tengu_clawd_openfire": false,
+    "tengu_prompt_suggestion": true,
+    "tengu_year_end_2025_campaign_promo": false,
+    "tengu_streaming_tool_execution2": false
+  },
+  "hasSeenStashHint": true,
+  "firstStartTime": "2025-09-26T07:53:44.475Z",
+  "userID": "592d53ce99bce824ce2f78b92f7e4e4ec007c417d2e7aca0d9e113ca0fc40259",
+  "projects": {
+    "/home/lmas": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0.5057695,
+      "lastAPIDuration": 43893,
+      "lastAPIDurationWithoutRetries": 43885,
+      "lastToolDuration": 598,
+      "lastDuration": 2078037,
+      "lastLinesAdded": 18,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 16131,
+      "lastTotalOutputTokens": 2338,
+      "lastTotalCacheCreationInputTokens": 23911,
+      "lastTotalCacheReadInputTokens": 260429,
+      "lastFpsAverage": 0.41,
+      "lastFpsLow1Pct": 1112.53,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 575,
+          "outputTokens": 18,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000665
+        },
+        "claude-opus-4-8[1m]": {
+          "inputTokens": 15556,
+          "outputTokens": 2320,
+          "cacheReadInputTokens": 260429,
+          "cacheCreationInputTokens": 23911,
+          "webSearchRequests": 0,
+          "costUSD": 0.5051045
+        }
+      },
+      "lastSessionId": "63d0068b-433e-4840-be84-4eebe2882aac",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 843,
+        "frame_duration_ms_min": 0.035730000003241,
+        "frame_duration_ms_max": 4.476089000003412,
+        "frame_duration_ms_avg": 0.27929180901553485,
+        "frame_duration_ms_p50": 0.24670100000003004,
+        "frame_duration_ms_p95": 0.5473288999856322,
+        "frame_duration_ms_p99": 0.8974198000025355,
+        "hook_duration_ms_count": 11,
+        "hook_duration_ms_min": 6,
+        "hook_duration_ms_max": 105,
+        "hook_duration_ms_avg": 54.18181818181818,
+        "hook_duration_ms_p50": 60,
+        "hook_duration_ms_p95": 84.5,
+        "hook_duration_ms_p99": 100.9,
+        "pre_tool_hook_duration_ms_count": 6,
+        "pre_tool_hook_duration_ms_min": 0,
+        "pre_tool_hook_duration_ms_max": 64,
+        "pre_tool_hook_duration_ms_avg": 33.833333333333336,
+        "pre_tool_hook_duration_ms_p50": 34.5,
+        "pre_tool_hook_duration_ms_p95": 63.75,
+        "pre_tool_hook_duration_ms_p99": 63.95
+      },
+      "lastGracefulShutdown": true,
+      "lastHintSessionId": "ec842f69-7ff0-40e7-87f0-a878717c15ff",
+      "lastSessionFirstPrompt": "what are the running tmux process ?",
+      "lastSessionModified": 1777884394852,
+      "lastVersionBase": "2.1.178"
+    },
+    "/home/lmas/dev/workspace": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 7,
+      "hasClaudeMdExternalIncludesApproved": true,
+      "hasClaudeMdExternalIncludesWarningShown": true,
+      "exampleFiles": [
+        "search-provider-pg.ts",
+        "mailer.service.ts",
+        "schema.gql",
+        "evollis-financing-contract.provider.spec.ts",
+        "search-result.ts"
+      ],
+      "exampleFilesGeneratedAt": 1781022828547,
+      "lastTotalWebSearchRequests": 0,
+      "hasCompletedProjectOnboarding": true,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 8.517628000000002,
+      "lastAPIDuration": 803329,
+      "lastAPIDurationWithoutRetries": 803283,
+      "lastToolDuration": 6801,
+      "lastDuration": 1426226,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 1657,
+      "lastTotalOutputTokens": 52685,
+      "lastTotalCacheCreationInputTokens": 71686,
+      "lastTotalCacheReadInputTokens": 12950716,
+      "lastModelUsage": {
+        "claude-opus-4-8[1m]": {
+          "inputTokens": 1657,
+          "outputTokens": 52685,
+          "cacheReadInputTokens": 12950716,
+          "cacheCreationInputTokens": 71686,
+          "webSearchRequests": 0,
+          "costUSD": 8.517628000000002
+        }
+      },
+      "lastSessionId": "c585e089-9527-457d-b704-d371fa2cd5ce",
+      "lastSessionMetrics": {
+        "hook_duration_ms_count": 51,
+        "hook_duration_ms_min": 3,
+        "hook_duration_ms_max": 267,
+        "hook_duration_ms_avg": 23.80392156862745,
+        "hook_duration_ms_p50": 8,
+        "hook_duration_ms_p95": 63.5,
+        "hook_duration_ms_p99": 168,
+        "frame_duration_ms_count": 8238,
+        "frame_duration_ms_min": 0.2257509999908507,
+        "frame_duration_ms_max": 397.576644,
+        "frame_duration_ms_avg": 1.0801482240833402,
+        "frame_duration_ms_p50": 0.7937570000067353,
+        "frame_duration_ms_p95": 1.231214649969479,
+        "frame_duration_ms_p99": 23.741157539996774,
+        "pre_tool_hook_duration_ms_count": 22,
+        "pre_tool_hook_duration_ms_min": 5,
+        "pre_tool_hook_duration_ms_max": 70,
+        "pre_tool_hook_duration_ms_avg": 21.818181818181817,
+        "pre_tool_hook_duration_ms_p50": 12.5,
+        "pre_tool_hook_duration_ms_p95": 68.69999999999999,
+        "pre_tool_hook_duration_ms_p99": 69.78999999999999
+      },
+      "disabledMcpServers": [],
+      "lastGracefulShutdown": true,
+      "lastFpsAverage": 5.81,
+      "lastFpsLow1Pct": 39.81,
+      "lastHintSessionId": "c43d8f0f-ca2a-4980-a54f-d91ca0ee08d1",
+      "lastSessionFirstPrompt": "Is VecnaApiKeyGuard using the vecna inbound api key ?",
+      "lastSessionModified": 1779093996625,
+      "lastVersionBase": "2.1.178",
+      "hasUnseenTeamArtifacts": false
+    },
+    "/home/lmas/.config/nvim": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 9,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "init.lua",
+        "telescope.lua",
+        "cmp.lua",
+        "lsp.lua",
+        "oil.lua"
+      ],
+      "exampleFilesGeneratedAt": 1761678188529
+    },
+    "/home/lmas/dotfiles": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "postgres-local": {
+          "type": "stdio",
+          "command": "bun",
+          "args": [
+            "/home/lmas/dev/mcp-servers/postgres-mcp/index.ts",
+            "postgresql://postgres:postgres@localhost:5432/postgres"
+          ],
+          "env": {}
+        },
+        "postgres-staging": {
+          "type": "stdio",
+          "command": "bash",
+          "args": [
+            "-c",
+            "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://mobileclub:$MC_DB_STAGING_PASSWORD@staging.mobileclub.internal:5432/mobileclub\""
+          ],
+          "env": {
+            "MC_DB_STAGING_PASSWORD": "${MC_DB_STAGING_PASSWORD}"
+          }
+        },
+        "postgres-prod": {
+          "type": "stdio",
+          "command": "bash",
+          "args": [
+            "-c",
+            "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://$MC_DB_PROD_USER:$MC_DB_PROD_PASSWORD@production.mobileclub.internal:5432/mobileclub\""
+          ],
+          "env": {
+            "MC_DB_PROD_USER": "${MC_DB_PROD_USER}",
+            "MC_DB_PROD_PASSWORD": "${MC_DB_PROD_PASSWORD}"
+          }
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "fedora-setup.sh",
+        "config",
+        "config.jsonc",
+        "analyze-ticket.sh",
+        "index.tsx"
+      ],
+      "exampleFilesGeneratedAt": 1781625493622,
+      "lastTotalWebSearchRequests": 0,
+      "lastGracefulShutdown": false,
+      "lastVersionBase": "2.1.178",
+      "hasUnseenTeamArtifacts": false,
+      "lastCost": 2.5299289999999997,
+      "lastAPIDuration": 403561,
+      "lastAPIDurationWithoutRetries": 403498,
+      "lastToolDuration": 52927,
+      "lastDuration": 948122,
+      "lastLinesAdded": 168,
+      "lastLinesRemoved": 7,
+      "lastTotalInputTokens": 15314,
+      "lastTotalOutputTokens": 24430,
+      "lastTotalCacheCreationInputTokens": 52954,
+      "lastTotalCacheReadInputTokens": 2631074,
+      "lastFpsAverage": 6.41,
+      "lastFpsLow1Pct": 240.61,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 527,
+          "outputTokens": 18,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000617
+        },
+        "claude-opus-4-8[1m]": {
+          "inputTokens": 14787,
+          "outputTokens": 24412,
+          "cacheReadInputTokens": 2631074,
+          "cacheCreationInputTokens": 52954,
+          "webSearchRequests": 0,
+          "costUSD": 2.5293119999999996
+        }
+      },
+      "lastSessionId": "af14e580-0fbc-4986-8d17-653793794b3e",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 6074,
+        "frame_duration_ms_min": 0.03848999999900116,
+        "frame_duration_ms_max": 20.731139999930747,
+        "frame_duration_ms_avg": 0.5535275255185587,
+        "frame_duration_ms_p50": 0.42599649998010136,
+        "frame_duration_ms_p95": 0.9930775000510033,
+        "frame_duration_ms_p99": 4.118585700055117,
+        "hook_duration_ms_count": 104,
+        "hook_duration_ms_min": 5,
+        "hook_duration_ms_max": 123,
+        "hook_duration_ms_avg": 36.15384615384615,
+        "hook_duration_ms_p50": 50,
+        "hook_duration_ms_p95": 64.69999999999999,
+        "hook_duration_ms_p99": 68.94,
+        "pre_tool_hook_duration_ms_count": 48,
+        "pre_tool_hook_duration_ms_min": 6,
+        "pre_tool_hook_duration_ms_max": 69,
+        "pre_tool_hook_duration_ms_avg": 23.729166666666668,
+        "pre_tool_hook_duration_ms_p50": 10,
+        "pre_tool_hook_duration_ms_p95": 67.94999999999999,
+        "pre_tool_hook_duration_ms_p99": 69
+      }
+    },
+    "/home/lmas/dev/cleaq/backend-api": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "DataSet.kt",
+        "OrderService.kt",
+        "management.graphqls",
+        "CrmApiService.kt",
+        "order.graphqls"
+      ],
+      "exampleFilesGeneratedAt": 1776959692556,
+      "lastGracefulShutdown": true,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 12627,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 1.69,
+      "lastFpsLow1Pct": 241.14,
+      "lastModelUsage": {},
+      "lastSessionId": "cb4f48d0-fe08-4752-992e-215e728d1d19",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 18,
+        "frame_duration_ms_min": 0.07961100000011356,
+        "frame_duration_ms_max": 4.147023999999988,
+        "frame_duration_ms_avg": 0.43550638888888216,
+        "frame_duration_ms_p50": 0.12924600000008013,
+        "frame_duration_ms_p95": 1.5898924999999182,
+        "frame_duration_ms_p99": 3.6355976999999693,
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 135,
+        "hook_duration_ms_max": 135,
+        "hook_duration_ms_avg": 135,
+        "hook_duration_ms_p50": 135,
+        "hook_duration_ms_p95": 135,
+        "hook_duration_ms_p99": 135
+      }
+    },
+    "/home/lmas/dev/pim-sync": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "smartphone-products.ts",
+        "b2c-subscriptions-link-to-upfront.sql",
+        "b2c-subscriptions-link-to-product-variation.sql",
+        "merge.ts",
+        "sync.ts"
+      ],
+      "exampleFilesGeneratedAt": 1777281342290,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 2463151,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "f01d166e-57bf-4723-a87f-7a7e510746b3",
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastAPIDurationWithoutRetries": 0,
+      "lastModelUsage": {},
+      "lastGracefulShutdown": true,
+      "lastFpsAverage": 2.81,
+      "lastFpsLow1Pct": 2719.31,
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 6046,
+        "frame_duration_ms_min": 0.03999999997904524,
+        "frame_duration_ms_max": 3.862007999999946,
+        "frame_duration_ms_avg": 0.08052229325179915,
+        "frame_duration_ms_p50": 0.06977999997252482,
+        "frame_duration_ms_p95": 0.11575799996498969,
+        "frame_duration_ms_p99": 0.3238571999361731,
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 71,
+        "hook_duration_ms_max": 71,
+        "hook_duration_ms_avg": 71,
+        "hook_duration_ms_p50": 71,
+        "hook_duration_ms_p95": 71,
+        "hook_duration_ms_p99": 71
+      }
+    },
+    "/home/lmas/dev/cleaq/frontend-next": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "DeviceListItem.tsx",
+        "sidebar.tsx",
+        "middleware.ts",
+        "page.tsx",
+        "AssignDevice.tsx"
+      ],
+      "exampleFilesGeneratedAt": 1764863271970,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/home/lmas/Downloads": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 1.54581025,
+      "lastAPIDuration": 241428,
+      "lastAPIDurationWithoutRetries": 241402,
+      "lastToolDuration": 51339,
+      "lastDuration": 749763,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 37457,
+      "lastTotalOutputTokens": 8547,
+      "lastTotalCacheCreationInputTokens": 74991,
+      "lastTotalCacheReadInputTokens": 1670393,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 37130,
+          "outputTokens": 526,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.03975999999999999
+        },
+        "claude-opus-4-5-20251101": {
+          "inputTokens": 327,
+          "outputTokens": 8021,
+          "cacheReadInputTokens": 1670393,
+          "cacheCreationInputTokens": 74991,
+          "webSearchRequests": 0,
+          "costUSD": 1.5060502500000001
+        }
+      },
+      "lastSessionId": "032f1670-7251-45ea-812c-d826d075d5d4"
+    },
+    "/home/lmas/dev/nmc": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 2.4947018499999998,
+      "lastAPIDuration": 479676,
+      "lastAPIDurationWithoutRetries": 479650,
+      "lastToolDuration": 239880,
+      "lastDuration": 25457170,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 9153,
+      "lastTotalOutputTokens": 47071,
+      "lastTotalCacheCreationInputTokens": 287209,
+      "lastTotalCacheReadInputTokens": 5212484,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.2,
+      "lastFpsLow1Pct": 791.86,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 729,
+          "outputTokens": 22424,
+          "cacheReadInputTokens": 4252576,
+          "cacheCreationInputTokens": 195342,
+          "webSearchRequests": 0,
+          "costUSD": 0.7822841000000003
+        },
+        "claude-opus-4-7[1m]": {
+          "inputTokens": 8424,
+          "outputTokens": 24647,
+          "cacheReadInputTokens": 959908,
+          "cacheCreationInputTokens": 91867,
+          "webSearchRequests": 0,
+          "costUSD": 1.7124177500000002
+        }
+      },
+      "lastSessionId": "aa08a14c-5ee3-42a5-a3f2-4cb433e1b5d6",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 5191,
+        "frame_duration_ms_min": 0.030830000003334135,
+        "frame_duration_ms_max": 8.837451998144388,
+        "frame_duration_ms_avg": 0.28997873010969033,
+        "frame_duration_ms_p50": 0.26114050003525335,
+        "frame_duration_ms_p95": 0.5797291500493883,
+        "frame_duration_ms_p99": 1.1774475700009497,
+        "hook_duration_ms_count": 190,
+        "hook_duration_ms_min": 1,
+        "hook_duration_ms_max": 126,
+        "hook_duration_ms_avg": 41.31578947368421,
+        "hook_duration_ms_p50": 53,
+        "hook_duration_ms_p95": 61,
+        "hook_duration_ms_p99": 68.21999999999997,
+        "pre_tool_hook_duration_ms_count": 138,
+        "pre_tool_hook_duration_ms_min": 0,
+        "pre_tool_hook_duration_ms_max": 10,
+        "pre_tool_hook_duration_ms_avg": 2,
+        "pre_tool_hook_duration_ms_p50": 0,
+        "pre_tool_hook_duration_ms_p95": 7.150000000000006,
+        "pre_tool_hook_duration_ms_p99": 8.629999999999995
+      },
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.145",
+      "hasCompletedProjectOnboarding": true
+    },
+    "/home/lmas/dev/probe/game": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 6,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 3.51603325,
+      "lastAPIDuration": 549560,
+      "lastAPIDurationWithoutRetries": 549544,
+      "lastToolDuration": 10914,
+      "lastDuration": 192525968,
+      "lastLinesAdded": 187,
+      "lastLinesRemoved": 21,
+      "lastTotalInputTokens": 596,
+      "lastTotalOutputTokens": 34596,
+      "lastTotalCacheCreationInputTokens": 150173,
+      "lastTotalCacheReadInputTokens": 3419144,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-opus-4-6[1m]": {
+          "inputTokens": 596,
+          "outputTokens": 34596,
+          "cacheReadInputTokens": 3419144,
+          "cacheCreationInputTokens": 150173,
+          "webSearchRequests": 0,
+          "costUSD": 3.51603325
+        }
+      },
+      "lastSessionId": "e76a3da6-89d5-46f2-b3da-550b06dbc38c",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 22257,
+        "frame_duration_ms_min": 0.045960000000036416,
+        "frame_duration_ms_max": 19.101071000099182,
+        "frame_duration_ms_avg": 0.4495863849642118,
+        "frame_duration_ms_p50": 0.39031600020825863,
+        "frame_duration_ms_p95": 0.827440850017592,
+        "frame_duration_ms_p99": 2.7403143100207483,
+        "hook_duration_ms_count": 90,
+        "hook_duration_ms_min": 0,
+        "hook_duration_ms_max": 70,
+        "hook_duration_ms_avg": 35.18888888888889,
+        "hook_duration_ms_p50": 46,
+        "hook_duration_ms_p95": 51,
+        "hook_duration_ms_p99": 58.42999999999999,
+        "pre_tool_hook_duration_ms_count": 50,
+        "pre_tool_hook_duration_ms_min": 0,
+        "pre_tool_hook_duration_ms_max": 52,
+        "pre_tool_hook_duration_ms_avg": 25.7,
+        "pre_tool_hook_duration_ms_p50": 10,
+        "pre_tool_hook_duration_ms_p95": 51.55,
+        "pre_tool_hook_duration_ms_p99": 52
+      },
+      "lastGracefulShutdown": true,
+      "lastFpsAverage": 0.11,
+      "lastFpsLow1Pct": 265.13
+    },
+    "/home/lmas/dev/orchestra": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 11,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastCost": 1.4633683,
+      "lastAPIDuration": 208411,
+      "lastAPIDurationWithoutRetries": 208377,
+      "lastToolDuration": 72473,
+      "lastDuration": 413707,
+      "lastLinesAdded": 23,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 14930,
+      "lastTotalOutputTokens": 12074,
+      "lastTotalCacheCreationInputTokens": 91666,
+      "lastTotalCacheReadInputTokens": 1655486,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 582,
+          "outputTokens": 3106,
+          "cacheReadInputTokens": 416048,
+          "cacheCreationInputTokens": 48762,
+          "webSearchRequests": 0,
+          "costUSD": 0.1186693
+        },
+        "claude-opus-4-8[1m]": {
+          "inputTokens": 14348,
+          "outputTokens": 8968,
+          "cacheReadInputTokens": 1239438,
+          "cacheCreationInputTokens": 42904,
+          "webSearchRequests": 0,
+          "costUSD": 1.3446989999999999
+        }
+      },
+      "lastSessionId": "bd8f6d87-9b40-414f-97fc-7707631d50a9",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 3140,
+        "frame_duration_ms_min": 0.04502999999999702,
+        "frame_duration_ms_max": 8.29580399999395,
+        "frame_duration_ms_avg": 0.4698471640129112,
+        "frame_duration_ms_p50": 0.3618414999982633,
+        "frame_duration_ms_p95": 0.908433500006501,
+        "frame_duration_ms_p99": 3.8142117700411466,
+        "hook_duration_ms_count": 103,
+        "hook_duration_ms_min": 4,
+        "hook_duration_ms_max": 100,
+        "hook_duration_ms_avg": 36.349514563106794,
+        "hook_duration_ms_p50": 50,
+        "hook_duration_ms_p95": 65.89999999999999,
+        "hook_duration_ms_p99": 68,
+        "pre_tool_hook_duration_ms_count": 49,
+        "pre_tool_hook_duration_ms_min": 4,
+        "pre_tool_hook_duration_ms_max": 69,
+        "pre_tool_hook_duration_ms_avg": 19.346938775510203,
+        "pre_tool_hook_duration_ms_p50": 9,
+        "pre_tool_hook_duration_ms_p95": 66.6,
+        "pre_tool_hook_duration_ms_p99": 69
+      },
+      "exampleFiles": [
+        "index.ts",
+        "styles.css",
+        "Sidebar.tsx",
+        "ipc.ts",
+        "index.html"
+      ],
+      "exampleFilesGeneratedAt": 1781043857109,
+      "hasCompletedProjectOnboarding": true,
+      "lastFpsAverage": 7.63,
+      "lastFpsLow1Pct": 258.65,
+      "lastHintSessionId": "9d2d09c2-5d1c-4c49-b1ea-f4f2d43989f6",
+      "lastSessionFirstPrompt": "I would like to publish orchestra on github, and maybe advertise for it",
+      "lastSessionModified": 1779132989955,
+      "lastVersionBase": "2.1.178",
+      "hasUnseenTeamArtifacts": false
+    },
+    "/home/lmas/dev/nmc/vecna-front": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.159",
+      "exampleFiles": [
+        "index.ts",
+        "Returns.vue",
+        "ReturnDiagnostic.vue",
+        "graphql.ts",
+        "Event.d.ts"
+      ],
+      "exampleFilesGeneratedAt": 1780300472761,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 232180009,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0,
+      "lastFpsLow1Pct": 33.07,
+      "lastModelUsage": {},
+      "lastSessionId": "cd667afe-af84-430a-a547-0b7408a20288",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 87,
+        "frame_duration_ms_min": 0.2695709999998144,
+        "frame_duration_ms_max": 30.23800799999981,
+        "frame_duration_ms_avg": 1.3863962644551293,
+        "frame_duration_ms_p50": 0.5610110014677048,
+        "frame_duration_ms_p95": 5.583043700000099,
+        "frame_duration_ms_p99": 14.368983560005674,
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 91,
+        "hook_duration_ms_max": 91,
+        "hook_duration_ms_avg": 91,
+        "hook_duration_ms_p50": 91,
+        "hook_duration_ms_p95": 91,
+        "hook_duration_ms_p99": 91
+      },
+      "hasUnseenTeamArtifacts": false
+    },
+    "/home/lmas/.orchestra/worktrees/workspace-rapid-canyon-93574768": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.161",
+      "lastSessionMetrics": {
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 191,
+        "hook_duration_ms_max": 191,
+        "hook_duration_ms_avg": 191,
+        "hook_duration_ms_p50": 191,
+        "hook_duration_ms_p95": 191,
+        "hook_duration_ms_p99": 191,
+        "frame_duration_ms_count": 27,
+        "frame_duration_ms_min": 0.22608000000036554,
+        "frame_duration_ms_max": 31.369715000000042,
+        "frame_duration_ms_avg": 2.811595518518861,
+        "frame_duration_ms_p50": 0.3470100000004095,
+        "frame_duration_ms_p95": 21.535941099999974,
+        "frame_duration_ms_p99": 30.833618400000006
+      },
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 68853,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.4,
+      "lastFpsLow1Pct": 31.88,
+      "lastModelUsage": {},
+      "lastSessionId": "1b2e0cd3-c0ab-4458-9778-feb63b5d3f46"
+    },
+    "/home/lmas/.orchestra/worktrees/workspace-humble-quasar-36e176a8": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.162",
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 2129176,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.02,
+      "lastFpsLow1Pct": 18.29,
+      "lastModelUsage": {},
+      "lastSessionId": "9354c3cb-57b3-4f86-aff5-a53b2777611d",
+      "lastSessionMetrics": {
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 105,
+        "hook_duration_ms_max": 105,
+        "hook_duration_ms_avg": 105,
+        "hook_duration_ms_p50": 105,
+        "hook_duration_ms_p95": 105,
+        "hook_duration_ms_p99": 105,
+        "frame_duration_ms_count": 32,
+        "frame_duration_ms_min": 0.307350999999926,
+        "frame_duration_ms_max": 54.68421999999998,
+        "frame_duration_ms_avg": 4.921823687488988,
+        "frame_duration_ms_p50": 0.842981499956295,
+        "frame_duration_ms_p95": 15.840485899971098,
+        "frame_duration_ms_p99": 43.20163337999159
+      }
+    },
+    "/home/lmas/dev/nmc/api": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastGracefulShutdown": true,
+      "lastVersionBase": "2.1.162",
+      "hasUnseenTeamArtifacts": false,
+      "exampleFiles": [
+        "DeadlineManager.php",
+        "Invoice.php",
+        "SyncInvoiceService.php",
+        "InvoiceRepository.php",
+        "SlimpayPayment.php"
+      ],
+      "exampleFilesGeneratedAt": 1780577600874,
+      "lastCost": 0.2841835,
+      "lastAPIDuration": 11854,
+      "lastAPIDurationWithoutRetries": 11849,
+      "lastToolDuration": 124,
+      "lastDuration": 11296655,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 743,
+      "lastTotalOutputTokens": 359,
+      "lastTotalCacheCreationInputTokens": 390,
+      "lastTotalCacheReadInputTokens": 538112,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 2.16,
+      "lastFpsLow1Pct": 5.16,
+      "lastModelUsage": {
+        "claude-opus-4-8[1m]": {
+          "inputTokens": 743,
+          "outputTokens": 359,
+          "cacheReadInputTokens": 538112,
+          "cacheCreationInputTokens": 390,
+          "webSearchRequests": 0,
+          "costUSD": 0.2841835
+        }
+      },
+      "lastSessionId": "1efc5b03-a267-44bd-8664-065280127d58",
+      "lastSessionMetrics": {
+        "hook_duration_ms_count": 1,
+        "hook_duration_ms_min": 130,
+        "hook_duration_ms_max": 130,
+        "hook_duration_ms_avg": 130,
+        "hook_duration_ms_p50": 130,
+        "hook_duration_ms_p95": 130,
+        "hook_duration_ms_p99": 130,
+        "frame_duration_ms_count": 21,
+        "frame_duration_ms_min": 0.6146019999996497,
+        "frame_duration_ms_max": 193.68144499999994,
+        "frame_duration_ms_avg": 16.271583952380915,
+        "frame_duration_ms_p50": 1.0609129999998004,
+        "frame_duration_ms_p95": 72.26576399999999,
+        "frame_duration_ms_p99": 169.39830880000005
+      }
+    }
+  },
+  "isQualifiedForDataSharing": false,
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "1.0.126",
+  "hasOpusPlanDefault": false,
+  "subscriptionNoticeCount": 1,
+  "hasAvailableSubscription": false,
+  "shiftEnterKeyBindingInstalled": true,
+  "changelogLastFetched": 1781567920225,
+  "lastReleaseNotesSeen": "2.1.178",
+  "s1mNonSubscriberAccessCache": {
+    "f479820d-1a6c-415f-bd32-bb20b4419186": {
+      "hasAccess": false,
+      "timestamp": 1759242235551
+    }
+  },
+  "recommendedSubscription": "",
+  "feedbackSurveyState": {
+    "lastShownTime": 1780908429738
+  },
+  "claudeCodeFirstTokenDate": "2025-09-26T08:01:02.720106Z",
+  "fallbackAvailableWarningThreshold": 0.2,
+  "s1mAccessCache": {
+    "3715d626-5df5-4d55-b5a1-89c3139bf455": {
+      "hasAccess": false,
+      "hasAccessNotAsDefault": false,
+      "timestamp": 1772009030738
+    }
+  },
+  "lastPlanModeUse": 1774025377940,
+  "autoUpdatesProtectedForNative": true,
+  "sonnet45MigrationComplete": true,
+  "mcpServers": {
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {}
+    },
+    "postgres-local": {
+      "type": "stdio",
+      "command": "bun",
+      "args": [
+        "/home/lmas/dev/mcp-servers/postgres-mcp/index.ts",
+        "postgresql://postgres:postgres@localhost:5432/postgres"
+      ],
+      "env": {}
+    },
+    "postgres-staging": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "-c",
+        "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://mobileclub:$MC_DB_STAGING_PASSWORD@staging.mobileclub.internal:5432/mobileclub\""
+      ],
+      "env": {
+        "MC_DB_STAGING_PASSWORD": "${MC_DB_STAGING_PASSWORD}"
+      }
+    },
+    "postgres-prod": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "-c",
+        "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://$MC_DB_PROD_USER:$MC_DB_PROD_PASSWORD@production.mobileclub.internal:5432/mobileclub\""
+      ],
+      "env": {
+        "MC_DB_PROD_USER": "${MC_DB_PROD_USER}",
+        "MC_DB_PROD_PASSWORD": "${MC_DB_PROD_PASSWORD}"
+      }
+    },
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-headed-wrapper.sh",
+      "args": [],
+      "env": {}
+    },
+    "datadog-mcp": {
+      "type": "http",
+      "url": "https://mcp.datadoghq.eu/api/unstable/mcp-server/mcp"
+    },
+    "linear-server": {
+      "type": "http",
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      }
+    },
+    "chrome-devtools-electron": {
+      "type": "stdio",
+      "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-wrapper.sh",
+      "args": [],
+      "env": {}
+    },
+    "mysql-nextmobile-int": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@benborla29/mcp-server-mysql"
+      ],
+      "env": {
+        "MYSQL_HOST": "nextmobile-int-mysqldb.mysql.database.azure.com",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "nextmobile_int",
+        "MYSQL_PASS": "${NEXTMOBILE_INT_DB_PASSWORD}",
+        "MYSQL_SSL": "true",
+        "ALLOW_INSERT_OPERATION": "false",
+        "ALLOW_UPDATE_OPERATION": "false",
+        "ALLOW_DELETE_OPERATION": "false"
+      }
+    },
+    "mysql-nextmobile-prod": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@benborla29/mcp-server-mysql"
+      ],
+      "env": {
+        "MYSQL_HOST": "nextmobile-prd-mysqldb.mysql.database.azure.com",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "nextmobiles_prd_readonly",
+        "MYSQL_PASS": "${NEXTMOBILE_PROD_DB_PASSWORD}",
+        "MYSQL_SSL": "true",
+        "ALLOW_INSERT_OPERATION": "false",
+        "ALLOW_UPDATE_OPERATION": "false",
+        "ALLOW_DELETE_OPERATION": "false"
+      }
+    },
+    "mysql-nextmobile-local": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@benborla29/mcp-server-mysql"
+      ],
+      "env": {
+        "MYSQL_HOST": "127.0.0.1",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "symfony",
+        "MYSQL_PASS": "symfony",
+        "MYSQL_DB": "symfony_db",
+        "MYSQL_SSL": "false",
+        "ALLOW_INSERT_OPERATION": "false",
+        "ALLOW_UPDATE_OPERATION": "false",
+        "ALLOW_DELETE_OPERATION": "false"
+      }
+    }
+  },
+  "hasUsedBackslashReturn": true,
+  "passesEligibilityCache": {
+    "3715d626-5df5-4d55-b5a1-89c3139bf455": {
+      "eligible": true,
+      "referral_code_details": {
+        "code": "IXvjDg19qA",
+        "campaign": "claude_code_guest_pass_a47c",
+        "referral_link": "https://claude.ai/referral/IXvjDg19qA"
+      },
+      "referrer_reward": {
+        "amount_minor_units": 1000,
+        "currency": "EUR"
+      },
+      "remaining_passes": 3,
+      "limit": 3,
+      "share_link": "https://claude.ai/referral/IXvjDg19qA",
+      "terms_url": "https://support.claude.com/en/articles/12875061-claude-code-guest-passes",
+      "timestamp": 1781613118633
+    }
+  },
+  "githubRepoPaths": {
+    "mobile-club/workspace": [
+      "/home/lmas/.orchestra/worktrees/workspace-clever-lynx-6a04c202",
+      "/home/lmas/.orchestra/worktrees/workspace-gentle-sparrow-fe39f3e2",
+      "/home/lmas/.orchestra/worktrees/workspace-gentle-lynx-a957e2d9",
+      "/home/lmas/.orchestra/worktrees/workspace-cosmic-forest-b65d074d",
+      "/home/lmas/.orchestra/worktrees/workspace-stellar-fox-edb52cad",
+      "/home/lmas/.orchestra/worktrees/workspace-clever-maple-114291b7",
+      "/home/lmas/.orchestra/worktrees/workspace-gentle-beetle-3b248d86",
+      "/home/lmas/.orchestra/worktrees/workspace-curious-canyon-2171d086",
+      "/home/lmas/.orchestra/worktrees/workspace-witty-comet-a375439b",
+      "/home/lmas/.orchestra/worktrees/workspace-nimble-meadow-5478ff14",
+      "/home/lmas/.orchestra/worktrees/workspace-silver-moth-9ab36143",
+      "/home/lmas/.orchestra/worktrees/workspace-cosmic-raven-db54bb8d",
+      "/home/lmas/dev/workspace",
+      "/home/lmas/.orchestra/worktrees/workspace-humble-quasar-36e176a8",
+      "/home/lmas/.orchestra/worktrees/workspace-rapid-canyon-93574768",
+      "/home/lmas/.orchestra/worktrees/workspace-golden-canyon-a41510f6",
+      "/home/lmas/.orchestra/worktrees/workspace-swift-orca-51480656",
+      "/home/lmas/.orchestra/worktrees/workspace-electric-maple-3bdab8e6",
+      "/home/lmas/.orchestra/worktrees/workspace-curious-aspen-2f62104e",
+      "/home/lmas/.orchestra/worktrees/workspace-radiant-koala-9a835ba5",
+      "/home/lmas/.orchestra/worktrees/workspace-brave-maple-2634f2b9",
+      "/home/lmas/.orchestra/worktrees/workspace-sunny-raven-61f82982",
+      "/home/lmas/.orchestra/worktrees/workspace-merry-quasar-cae00ff5",
+      "/home/lmas/.orchestra/worktrees/workspace-silent-beetle-f4e5319b",
+      "/home/lmas/.orchestra/worktrees/workspace-silent-beetle-b1911e8d",
+      "/home/lmas/.orchestra/worktrees/workspace-rapid-aspen-e6b94c17",
+      "/home/lmas/.orchestra/worktrees/workspace-quiet-spark-b71b5ce4",
+      "/home/lmas/.orchestra/worktrees/workspace-witty-otter-e0f72caa",
+      "/home/lmas/.orchestra/worktrees/workspace-nimble-river-146c2efc",
+      "/home/lmas/.orchestra/worktrees/workspace-merry-river-e463d32e",
+      "/home/lmas/.orchestra/worktrees/workspace-quiet-summit-7da5e349",
+      "/home/lmas/.orchestra/worktrees/workspace-test2-58810977",
+      "/home/lmas/.orchestra/worktrees/workspace-witty-falcon-39e8b9c8",
+      "/home/lmas/.orchestra/worktrees/workspace-silver-willow-d8121c14",
+      "/home/lmas/.orchestra/worktrees/workspace-stellar-aspen-3f37da01",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-24a3cbb3-24a3cbb3",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-52ed12a4-52ed12a4",
+      "/home/lmas/.orchestra/worktrees/workspace-test-00091135",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-0212d72e-0212d72e",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-378fac72-378fac72",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-8d6f292c-8d6f292c",
+      "/home/lmas/.orchestra/worktrees/workspace-orchestra-75947580-75947580",
+      "/home/lmas/dev/workspace/packages/api-v2"
+    ],
+    "mobile-club/pim-sync": [
+      "/home/lmas/.orchestra/worktrees/pim-sync-daring-pine-de45b4af",
+      "/home/lmas/.orchestra/worktrees/pim-sync-calm-badger-0fa22817",
+      "/home/lmas/.orchestra/worktrees/pim-sync-jolly-maple-0df9f5b6",
+      "/home/lmas/.orchestra/worktrees/pim-sync-tidy-comet-f89b985e",
+      "/home/lmas/dev/pim-sync"
+    ],
+    "cleaq/backend-api": [
+      "/home/lmas/.orchestra/worktrees/backend-api-curious-horizon-c251efa2",
+      "/home/lmas/dev/cleaq/backend-api"
+    ],
+    "lcsmas/dotfiles": [
+      "/home/lmas/dotfiles"
+    ],
+    "cleaq/frontend-next": [
+      "/home/lmas/dev/cleaq/frontend-next"
+    ],
+    "lcsmas/orchestra": [
+      "/home/lmas/.orchestra/worktrees/orchestra-stellar-canyon-bfd542f7",
+      "/home/lmas/.orchestra/worktrees/orchestra-calm-ember-2dba7432",
+      "/home/lmas/.orchestra/worktrees/orchestra-clever-lynx-7a1a3ed8",
+      "/home/lmas/.orchestra/worktrees/orchestra-tidy-sparrow-2320b685",
+      "/home/lmas/.orchestra/worktrees/orchestra-daring-aspen-a7d7b114",
+      "/home/lmas/.orchestra/worktrees/orchestra-humble-cedar-d3f1ad3a",
+      "/home/lmas/dev/orchestra",
+      "/home/lmas/.orchestra/worktrees/orchestra-silver-panda-ea11f3f5",
+      "/home/lmas/.orchestra/worktrees/orchestra-sunny-moth-0d92a253",
+      "/home/lmas/.orchestra/worktrees/orchestra-stellar-otter-6b4f7bc1",
+      "/home/lmas/.orchestra/worktrees/orchestra-humble-willow-16cbe3b2",
+      "/home/lmas/.orchestra/worktrees/orchestra-quiet-nebula-8f2284c1",
+      "/home/lmas/.orchestra/worktrees/orchestra-noble-beetle-f73aa38b",
+      "/home/lmas/.orchestra/worktrees/orchestra-curious-beetle-ac187d4c",
+      "/home/lmas/.orchestra/worktrees/orchestra-rapid-beetle-ed16b2f8",
+      "/home/lmas/.orchestra/worktrees/orchestra-crimson-orca-aa9b0321",
+      "/home/lmas/.orchestra/worktrees/orchestra-stellar-otter-b9dbc6fe",
+      "/home/lmas/.orchestra/worktrees/orchestra-fuzzy-harbor-63d68806",
+      "/home/lmas/.orchestra/worktrees/orchestra-electric-falcon-85228835",
+      "/home/lmas/.orchestra/worktrees/orchestra-merry-forest-fd165f9d",
+      "/home/lmas/.orchestra/worktrees/orchestra-witty-cedar-597fb7ca",
+      "/home/lmas/.orchestra/worktrees/orchestra-radiant-horizon-b81575e6",
+      "/home/lmas/.orchestra/worktrees/orchestra-solar-badger-2e6359fb",
+      "/home/lmas/.orchestra/worktrees/orchestra-calm-quasar-4c069d8f",
+      "/home/lmas/.orchestra/worktrees/orchestra-swift-willow-af8d6ed8",
+      "/home/lmas/.orchestra/worktrees/orchestra-curious-comet-9fe69917",
+      "/home/lmas/.orchestra/worktrees/orchestra-crimson-orca-86f030c3",
+      "/home/lmas/.orchestra/worktrees/orchestra-silent-orca-61a097dc",
+      "/home/lmas/.orchestra/worktrees/orchestra-stellar-quasar-bc2bb0a8",
+      "/home/lmas/.orchestra/worktrees/orchestra-humble-breeze-c1680748",
+      "/home/lmas/.orchestra/worktrees/orchestra-tidy-falcon-f9e02930",
+      "/home/lmas/.orchestra/worktrees/orchestra-golden-panda-730cbd96",
+      "/home/lmas/.orchestra/worktrees/orchestra-witty-meado-ea114afe",
+      "/home/lmas/.orchestra/worktrees/orchestra-witty-meadow-ea114afe",
+      "/home/lmas/.orchestra/worktrees/orchestra-solar-nebul-ea114afe",
+      "/home/lmas/.orchestra/worktrees/orchestra-brave-maple-ea114afe",
+      "/home/lmas/.orchestra/worktrees/orchestra-solar-nebula-ea114afe",
+      "/home/lmas/.orchestra/worktrees/orchestra-golden-aspen-ff5fe4ed",
+      "/home/lmas/.orchestra/worktrees/orchestra-nimble-moth-5ece7e48",
+      "/home/lmas/.orchestra/worktrees/orchestra-curious-fox-9f0fd254",
+      "/home/lmas/.orchestra/worktrees/orchestra-radiant-ember-ff5fe4ed",
+      "/home/lmas/.orchestra/worktrees/orchestra-swift-beetle-1e5129f7",
+      "/home/lmas/.orchestra/worktrees/orchestra-master-8cb550ee",
+      "/home/lmas/.orchestra/worktrees/orchestra-sunny-beetle-8cb550ee",
+      "/home/lmas/.orchestra/worktrees/orchestra-vivid-moth-1b902598",
+      "/home/lmas/.orchestra/worktrees/orchestra-solar-meadow-cd23da06",
+      "/home/lmas/.orchestra/worktrees/orchestra-tidy-nebula-13e3da57",
+      "/home/lmas/.orchestra/worktrees/orchestra-daring-otter-5f86eb0d",
+      "/home/lmas/.orchestra/worktrees/orchestra-rapid-koala-affc0aba",
+      "/home/lmas/.orchestra/worktrees/orchestra-fuzzy-otter-755045e9",
+      "/home/lmas/.orchestra/worktrees/orchestra-high-definition-picto-icons-2f4dbe4a",
+      "/home/lmas/.orchestra/worktrees/orchestra-witty-meadow-f153a7d1",
+      "/home/lmas/.orchestra/worktrees/orchestra-jolly-quasar-2f4dbe4a",
+      "/home/lmas/.orchestra/worktrees/orchestra-silver-river-cc4172c2",
+      "/home/lmas/.orchestra/worktrees/orchestra-brave-maple-3a4dd6f2",
+      "/home/lmas/.orchestra/worktrees/orchestra-gentle-panda-6605d630",
+      "/home/lmas/.orchestra/worktrees/orchestra-radiant-willow-ba55fb26",
+      "/home/lmas/.orchestra/worktrees/orchestra-noble-river-85750627",
+      "/home/lmas/.orchestra/worktrees/orchestra-golden-aspen-51f0c4be",
+      "/home/lmas/.orchestra/worktrees/orchestra-solar-ember-5b4e4e00"
+    ],
+    "next-mobiles/vecna-front": [
+      "/home/lmas/.orchestra/worktrees/vecna-front-electric-spark-db2efe1d",
+      "/home/lmas/.orchestra/worktrees/vecna-front-cosmic-harbor-bfc8d974"
+    ],
+    "next-mobiles/api": [
+      "/home/lmas/.orchestra/worktrees/api-witty-lynx-5ea506af"
+    ]
+  },
+  "opus45MigrationComplete": true,
+  "hasShownOpus45Notice": {
+    "3715d626-5df5-4d55-b5a1-89c3139bf455": true
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "thinkingMigrationComplete": true,
+  "passesUpsellSeenCount": 4,
+  "anonymousId": "claudecode.v1.9f1dc49d-36a9-40a9-bd23-c2f6dbc6b2ba",
+  "groveConfigCache": {
+    "4ebb99e5-1245-4f28-a0ce-6508a8a87120": {
+      "timestamp": 1781613115930
+    }
+  },
+  "opusProMigrationComplete": true,
+  "opusProMigrationTimestamp": 1768474556148,
+  "cachedChromeExtensionInstalled": false,
+  "hasVisitedPasses": false,
+  "passesLastSeenCampaign": "claude_code_guest_pass_a47c",
+  "sonnet1m45MigrationComplete": true,
+  "clientDataCache": null,
+  "passesLastSeenRemaining": 3,
+  "hasShownOpus46Notice": {
+    "3715d626-5df5-4d55-b5a1-89c3139bf455": true
+  },
+  "effortCalloutDismissed": true,
+  "showSpinnerTree": false,
+  "penguinModeOrgEnabled": true,
+  "cachedExtraUsageDisabledReason": "out_of_credits",
+  "skillUsage": {
+    "gsd:quick": {
+      "usageCount": 12,
+      "lastUsedAt": 1774607906893
+    },
+    "gsd:resume-work": {
+      "usageCount": 8,
+      "lastUsedAt": 1773655055381
+    },
+    "gsd:verify-work": {
+      "usageCount": 14,
+      "lastUsedAt": 1775144212021
+    },
+    "gsd:audit-milestone": {
+      "usageCount": 1,
+      "lastUsedAt": 1772030280616
+    },
+    "gsd:complete-milestone": {
+      "usageCount": 1,
+      "lastUsedAt": 1772031225829
+    },
+    "gsd:new-milestone": {
+      "usageCount": 4,
+      "lastUsedAt": 1772447022700
+    },
+    "gsd:update": {
+      "usageCount": 10,
+      "lastUsedAt": 1775720918123
+    },
+    "gsd:discuss-phase": {
+      "usageCount": 2,
+      "lastUsedAt": 1772459626380
+    },
+    "gsd:plan-phase": {
+      "usageCount": 4,
+      "lastUsedAt": 1773741068482
+    },
+    "gsd:execute-phase": {
+      "usageCount": 3,
+      "lastUsedAt": 1772551205998
+    },
+    "gsd:help": {
+      "usageCount": 1,
+      "lastUsedAt": 1772533967865
+    },
+    "gsd:settings": {
+      "usageCount": 1,
+      "lastUsedAt": 1772534082039
+    },
+    "gsd:check-todos": {
+      "usageCount": 1,
+      "lastUsedAt": 1772534520037
+    },
+    "gsd:add-phase": {
+      "usageCount": 3,
+      "lastUsedAt": 1773327802232
+    },
+    "gsd:do": {
+      "usageCount": 14,
+      "lastUsedAt": 1775641876302
+    },
+    "uat": {
+      "usageCount": 6,
+      "lastUsedAt": 1774522579275
+    },
+    "gsd:ship": {
+      "usageCount": 11,
+      "lastUsedAt": 1775642044185
+    },
+    "simplify": {
+      "usageCount": 2,
+      "lastUsedAt": 1775125044357
+    },
+    "gsd:fast": {
+      "usageCount": 1,
+      "lastUsedAt": 1775641891005
+    },
+    "gsd-do": {
+      "usageCount": 13,
+      "lastUsedAt": 1777451940941
+    },
+    "gsd-quick": {
+      "usageCount": 12,
+      "lastUsedAt": 1780491458363
+    },
+    "gsd-ship": {
+      "usageCount": 11,
+      "lastUsedAt": 1780324328634
+    },
+    "gsd-debug": {
+      "usageCount": 3,
+      "lastUsedAt": 1777362268864
+    },
+    "gsd-research-phase": {
+      "usageCount": 1,
+      "lastUsedAt": 1776083834489
+    },
+    "gsd-verify-work": {
+      "usageCount": 5,
+      "lastUsedAt": 1778145214208
+    },
+    "gsd-update": {
+      "usageCount": 8,
+      "lastUsedAt": 1779090852930
+    },
+    "gsd-explore": {
+      "usageCount": 3,
+      "lastUsedAt": 1776779382537
+    },
+    "gsd-add-phase": {
+      "usageCount": 1,
+      "lastUsedAt": 1776346284550
+    },
+    "gsd-new-milestone": {
+      "usageCount": 2,
+      "lastUsedAt": 1779790103619
+    },
+    "gsd-plan-phase": {
+      "usageCount": 6,
+      "lastUsedAt": 1781251675893
+    },
+    "gsd-execute-phase": {
+      "usageCount": 5,
+      "lastUsedAt": 1781252839541
+    },
+    "gsd-code-review": {
+      "usageCount": 5,
+      "lastUsedAt": 1781253843642
+    },
+    "gsd-resume-work": {
+      "usageCount": 2,
+      "lastUsedAt": 1776765421343
+    },
+    "statusline": {
+      "usageCount": 1,
+      "lastUsedAt": 1776779035685
+    },
+    "gsd-map-codebase": {
+      "usageCount": 2,
+      "lastUsedAt": 1777967604943
+    },
+    "update-config": {
+      "usageCount": 1,
+      "lastUsedAt": 1777468222341
+    },
+    "gsd-docs-update": {
+      "usageCount": 1,
+      "lastUsedAt": 1777883734129
+    },
+    "gsd-progress": {
+      "usageCount": 18,
+      "lastUsedAt": 1780904213269
+    },
+    "gsd-phase": {
+      "usageCount": 3,
+      "lastUsedAt": 1780301978375
+    },
+    "gsd-new-project": {
+      "usageCount": 2,
+      "lastUsedAt": 1777967860320
+    },
+    "gsd-discuss-phase": {
+      "usageCount": 6,
+      "lastUsedAt": 1780904305315
+    }
+  },
+  "toolUsage": {
+    "Bash": {
+      "usageCount": 121,
+      "lastUsedAt": 1772106906309
+    },
+    "Glob": {
+      "usageCount": 21,
+      "lastUsedAt": 1772032110792
+    },
+    "AskUserQuestion": {
+      "usageCount": 7,
+      "lastUsedAt": 1772032594146
+    },
+    "Read": {
+      "usageCount": 163,
+      "lastUsedAt": 1772035689731
+    },
+    "Task": {
+      "usageCount": 6,
+      "lastUsedAt": 1772031751165
+    },
+    "Grep": {
+      "usageCount": 11,
+      "lastUsedAt": 1772034635708
+    },
+    "Write": {
+      "usageCount": 16,
+      "lastUsedAt": 1772032766882
+    },
+    "ReadMcpResourceTool": {
+      "usageCount": 2,
+      "lastUsedAt": 1772029978750
+    },
+    "mcp__postgres-local__query": {
+      "usageCount": 11,
+      "lastUsedAt": 1772030166824
+    },
+    "Edit": {
+      "usageCount": 23,
+      "lastUsedAt": 1772032784874
+    },
+    "TaskCreate": {
+      "usageCount": 5,
+      "lastUsedAt": 1772032092515
+    },
+    "TaskUpdate": {
+      "usageCount": 10,
+      "lastUsedAt": 1772032334889
+    },
+    "TaskOutput": {
+      "usageCount": 4,
+      "lastUsedAt": 1772033173374
+    }
+  },
+  "effortCalloutV2Dismissed": true,
+  "additionalModelOptionsCache": [
+    {
+      "value": "claude-fable-5[1m]",
+      "label": "Fable (disabled)",
+      "description": "Claude Fable 5 is currently unavailable. Learn more: https://www.anthropic.com/news/fable-mythos-access",
+      "disabled": true
+    }
+  ],
+  "metricsStatusCache": {
+    "enabled": true,
+    "timestamp": 1777301073292
+  },
+  "overageCreditGrantCache": {
+    "3715d626-5df5-4d55-b5a1-89c3139bf455": {
+      "info": {
+        "available": false,
+        "eligible": false,
+        "granted": false,
+        "amount_minor_units": null,
+        "currency": null
+      },
+      "timestamp": 1778139138937
+    }
+  },
+  "migrationVersion": 13,
+  "additionalModelCostsCache": {},
+  "hasVisitedExtraUsage": true,
+  "remoteControlUpsellSeenCount": 3,
+  "closedIssuesLastChecked": 1781613116375,
+  "hasResetAutoModeOptInForDefaultOffer": true,
+  "oauthAccount": {
+    "accountUuid": "4ebb99e5-1245-4f28-a0ce-6508a8a87120",
+    "emailAddress": "lucas_mas@msn.com",
+    "organizationUuid": "3715d626-5df5-4d55-b5a1-89c3139bf455",
+    "hasExtraUsageEnabled": true,
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2024-07-04T12:25:42.797166Z",
+    "subscriptionCreatedAt": "2024-07-04T15:54:30.916670Z",
+    "ccOnboardingFlags": {},
+    "claudeCodeTrialEndsAt": null,
+    "claudeCodeTrialDurationDays": null,
+    "displayName": "Lucas",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "lucas_mas@msn.com's Organization",
+    "organizationType": "claude_max",
+    "organizationRateLimitTier": "default_claude_max_5x",
+    "userRateLimitTier": null,
+    "seatTier": null
+  },
+  "cachedExperimentFeatures": [
+    "tengu_amber_prism",
+    "tengu_cedar_inlet",
+    "tengu_coral_beacon",
+    "tengu_flint_harbor",
+    "tengu_mcp_subagent_prompt",
+    "tengu_neapolitan",
+    "tengu_orchid_mantis_v2",
+    "tengu_plank_river_frost",
+    "tengu_read_dedup_killswitch",
+    "tengu_slate_harrier"
+  ],
+  "resumeReturnDismissed": true,
+  "seenNotifications": {
+    "subscription-switch": 1
+  },
+  "routineFiredWatermark": "2026-05-11T09:28:47.473Z",
+  "cachedGrowthBookFeaturesAt": 1781626769448,
+  "tipLifetimeShownCounts": {
+    "install-slack-app": 11,
+    "permissions": 11,
+    "voice-mode": 11,
+    "theme-command": 10,
+    "image-paste": 10,
+    "remote-control": 10,
+    "rename-conversation": 10,
+    "default-permission-mode-config": 11,
+    "color-when-multi-clauding": 11,
+    "shift-enter": 11,
+    "drag-and-drop-images": 10,
+    "enter-to-steer-in-relatime": 10,
+    "agent-flag": 10,
+    "web-app": 10,
+    "feedback-command": 9,
+    "double-esc-code-restore": 10,
+    "continue": 10,
+    "install-github-app": 10,
+    "shift-tab": 10,
+    "todo-list": 10,
+    "plan-mode-for-complex-tasks": 10,
+    "ide-upsell-external-terminal": 10,
+    "loop-command-nudge": 5,
+    "colorterm-truecolor": 7,
+    "frontend-design-plugin": 3,
+    "fotw-campaign-upsell": 4,
+    "guest-passes": 8,
+    "agents-view-multiclauding": 5,
+    "git-worktrees": 2
+  },
+  "lastShownEmergencyTip": "Claude Fable 5 is currently unavailable. Please use Opus 4.8 or another available model. Learn more: https://www.anthropic.com/news/fable-mythos-access"
+}
