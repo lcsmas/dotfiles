@@ -1,3 +1,16 @@
 Session.vim
 *app-*.conf
 !*-app-default.conf
+
+# Secrets — never commit (repo is public)
+linear-automation/.env
+.env
+
+# Secrets: only the age-encrypted .zsh_secret.age is committed.
+# Never commit the plaintext secret or the age private key.
+.zsh_secret
+*.key
+key.txt
+
+# Claude runtime config (contains tokens + runtime data)
+.claude/.claude.json

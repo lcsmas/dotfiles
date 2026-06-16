@@ -2,6 +2,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="nvim"
 
+source $HOME/.zshenv
+
 ZSH_THEME="robbyrussell"
 plugins=(git zsh-vi-mode yarn zsh-autosuggestions fzf-tab zsh-syntax-highlighting)
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
@@ -24,7 +26,27 @@ export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH:/opt/nvim/:$HOME/.local/bin:
 
 # Custom scripts setup
 source ~/.zsh_aliases
-[ -f ~/.zsh_secret ] && source ~/.zsh_secret
+export PATH="$HOME/dotfiles/bin:$PATH"
+
+# Ensure the versioned git hooks are active in the dotfiles repo (core.hooksPath
+# is local config, so it must be re-applied per machine). Cheap idempotent check.
+if [ -d ~/dotfiles/.git ] && [ -d ~/dotfiles/bin/hooks ]; then
+    if [ "$(git -C ~/dotfiles config core.hooksPath 2>/dev/null)" != "bin/hooks" ]; then
+        git -C ~/dotfiles config core.hooksPath bin/hooks
+    fi
+fi
+
+# Secrets (lazy cache): if plaintext ~/.zsh_secret exists, source it (fast path,
+# no 1Password prompt). Otherwise decrypt .zsh_secret.age using the age key from
+# 1Password, cache the plaintext to ~/.zsh_secret (chmod 600, gitignored), and
+# source it. First shell after a reboot/lock may prompt once for 1Password.
+if [ -f ~/.zsh_secret ]; then
+    source ~/.zsh_secret
+elif [ -f ~/dotfiles/.zsh_secret.age ] && command -v age >/dev/null 2>&1 && command -v op >/dev/null 2>&1; then
+    if ~/dotfiles/bin/secrets unseal >/dev/null 2>&1; then
+        source ~/.zsh_secret
+    fi
+fi
 
 # FZF setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

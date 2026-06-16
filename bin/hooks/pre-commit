@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# pre-commit — auto re-encrypt ~/.zsh_secret into .zsh_secret.age and stage it.
+#
+# Runs `secrets seal` so the committed ciphertext always reflects your current
+# plaintext. Designed to NEVER block an unrelated commit: if there's no plaintext,
+# or 1Password is locked, it warns and lets the commit proceed.
+set -uo pipefail
+
+REPO="$(git rev-parse --show-toplevel)"
+PLAIN="$HOME/.zsh_secret"
+CIPHER="$REPO/.zsh_secret.age"
+SECRETS="$REPO/bin/secrets"
+
+# Nothing to do if the plaintext doesn't exist on this machine.
+[ -f "$PLAIN" ] || exit 0
+[ -x "$SECRETS" ] || exit 0
+
+# Try to re-seal. If 1Password is locked or anything fails, warn but don't block.
+if "$SECRETS" seal >/dev/null 2>&1; then
+  if ! git diff --quiet -- "$CIPHER" 2>/dev/null || ! git ls-files --error-unmatch "$CIPHER" >/dev/null 2>&1; then
+    git add "$CIPHER"
+    echo "pre-commit: re-sealed and staged .zsh_secret.age"
+  fi
+else
+  echo "pre-commit: WARNING could not re-seal .zsh_secret (1Password locked?)." >&2
+  echo "pre-commit: committing existing .zsh_secret.age unchanged. Run 'secrets seal' after unlocking." >&2
+fi
+exit 0

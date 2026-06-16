@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+# Auto-toggles sway "game" mode based on the focused window's class.
+# When a window matching GAME_PATTERNS is focused, sway enters "game" mode
+# (passthrough — almost no bindings). When focus leaves, sway returns to default.
+#
+# Used to stop sway shortcuts ($mod+1, $mod+q, etc.) from eating game keybinds.
+
+set -u
+
+GAME_PATTERNS=(
+  "wow.exe"
+  "wowclassic.exe"
+  "wowclassicb.exe"
+  "wow-64.exe"
+)
+
+# Single-instance via flock on this script file. Locking on $0 means we don't
+# rely on a separate lock file that could be deleted (which would defeat flock).
+exec 9<"$0"
+flock -n 9 || exit 0
+
+is_game() {
+  local cls="${1,,}"
+  [[ -z "$cls" ]] && return 1
+  for p in "${GAME_PATTERNS[@]}"; do
+    [[ "$cls" == "$p" ]] && return 0
+  done
+  return 1
+}
+
+# Must match `floating_modifier` in the main sway config so we can restore it
+# after game mode. `none` disables mod+drag move/resize entirely, so WoW's own
+# alt/super + right-click stops summoning sway's window resize dragger.
+FLOATING_MOD_DEFAULT="Mod4 normal"
+
+current_mode="default"
+
+swaymsg -t subscribe -m '["window"]' | while read -r event; do
+  change=$(echo "$event" | jq -r '.change')
+  [[ "$change" != "focus" ]] && continue
+
+  cls=$(echo "$event" | jq -r '
+    .container.window_properties.class
+    // .container.window_properties.instance
+    // .container.app_id
+    // ""
+  ')
+
+  if is_game "$cls"; then
+    if [[ "$current_mode" != "game" ]]; then
+      swaymsg mode "game" >/dev/null
+      swaymsg floating_modifier none >/dev/null
+      current_mode="game"
+    fi
+  else
+    if [[ "$current_mode" != "default" ]]; then
+      swaymsg mode "default" >/dev/null
+      swaymsg floating_modifier $FLOATING_MOD_DEFAULT >/dev/null
+      current_mode="default"
+    fi
+  fi
+done

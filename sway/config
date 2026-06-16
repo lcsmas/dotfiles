@@ -1,5 +1,8 @@
 # Read `man 5 sway` for a complete reference.
 
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 # Mod4 is Logo key. 
 # Mod1 is Alt key.
 set $alt Mod1
@@ -29,20 +32,20 @@ gaps outer 4
 gaps inner 2
 default_border pixel 2
 
-output HDMI-A-1 resolution 1920x1080@60Hz position 1920 0
-output DP-3 resolution 1920x1080@240Hz position 0 0
+# BenQ ZOWIE XL - match by serial so it works on any DP port
+output "BNQ ZOWIE XL LCD EBRAL02755SL0" resolution 1920x1080@240Hz position 0 0
 
-# Assign workspaces to left screen (DP-3) by default
-workspace 1 output DP-3
-workspace 2 output DP-3
-workspace 3 output DP-3
-workspace 4 output DP-3
-workspace 5 output DP-3
-workspace 6 output DP-3
-workspace 7 output DP-3
-workspace 8 output DP-3
-workspace 9 output DP-3
-workspace 10 output DP-3
+# Assign workspaces to BenQ ZOWIE XL by default
+workspace 1 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 2 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 3 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 4 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 5 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 6 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 7 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 8 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 9 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
+workspace 10 output "BNQ ZOWIE XL LCD EBRAL02755SL0"
 
 gaps outer 4
 gaps inner 4
@@ -128,6 +131,9 @@ bindsym $mod+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
 bindsym $mod+Shift+space floating toggle
+
+# Float the Chrome instance launched by chrome-devtools MCP
+for_window [app_id="chrome-mcp"] floating enable, resize set 1280 800, move position center
 
 # Swap focus between the tiling area and the floating area
 # bindsym $mod+space focus mode_toggle
