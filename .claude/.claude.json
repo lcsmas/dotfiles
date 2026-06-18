@@ -1641,7 +1641,7 @@
       "env": {
         "MYSQL_HOST": "nextmobile-prd-mysqldb.mysql.database.azure.com",
         "MYSQL_PORT": "3306",
-        "MYSQL_USER": "nextmobiles_prd_readonly",
+        "MYSQL_USER": "nextmobile_ro",
         "MYSQL_PASS": "${NEXTMOBILE_PROD_DB_PASSWORD}",
         "MYSQL_SSL": "true",
         "ALLOW_INSERT_OPERATION": "false",
