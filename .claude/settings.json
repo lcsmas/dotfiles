@@ -107,8 +107,9 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "node \"/home/lmas/.claude/hooks/gsd-statusline.js\""
+    "command": "bash /home/lmas/dotfiles/.claude/statusline-robbyrussell.sh"
   },
   "skipDangerousModePermissionPrompt": true,
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "tui": "fullscreen"
 }
