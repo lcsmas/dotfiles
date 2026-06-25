@@ -1555,9 +1555,10 @@
     },
     "postgres-local": {
       "type": "stdio",
-      "command": "bun",
+      "command": "npx",
       "args": [
-        "/home/lmas/dev/mcp-servers/postgres-mcp/index.ts",
+        "-y",
+        "@modelcontextprotocol/server-postgres",
         "postgresql://postgres:postgres@localhost:5432/postgres"
       ],
       "env": {}
@@ -1567,7 +1568,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://mobileclub:$MC_DB_STAGING_PASSWORD@staging.mobileclub.internal:5432/mobileclub\""
+        "npx -y @modelcontextprotocol/server-postgres \"postgresql://mobileclub:$MC_DB_STAGING_PASSWORD@staging.mobileclub.internal:5432/mobileclub\""
       ],
       "env": {
         "MC_DB_STAGING_PASSWORD": "${MC_DB_STAGING_PASSWORD}"
@@ -1578,7 +1579,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "bun /home/lmas/dev/mcp-servers/postgres-mcp/index.ts \"postgresql://$MC_DB_PROD_USER:$MC_DB_PROD_PASSWORD@production.mobileclub.internal:5432/mobileclub\""
+        "npx -y @modelcontextprotocol/server-postgres \"postgresql://$MC_DB_PROD_USER:$MC_DB_PROD_PASSWORD@production.mobileclub.internal:5432/mobileclub\""
       ],
       "env": {
         "MC_DB_PROD_USER": "${MC_DB_PROD_USER}",
