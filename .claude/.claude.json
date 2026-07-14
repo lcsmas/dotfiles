@@ -1612,61 +1612,6 @@
       "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-wrapper.sh",
       "args": [],
       "env": {}
-    },
-    "mysql-nextmobile-int": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@benborla29/mcp-server-mysql"
-      ],
-      "env": {
-        "MYSQL_HOST": "nextmobile-int-mysqldb.mysql.database.azure.com",
-        "MYSQL_PORT": "3306",
-        "MYSQL_USER": "nextmobile_int",
-        "MYSQL_PASS": "${NEXTMOBILE_INT_DB_PASSWORD}",
-        "MYSQL_SSL": "true",
-        "ALLOW_INSERT_OPERATION": "false",
-        "ALLOW_UPDATE_OPERATION": "false",
-        "ALLOW_DELETE_OPERATION": "false"
-      }
-    },
-    "mysql-nextmobile-prod": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@benborla29/mcp-server-mysql"
-      ],
-      "env": {
-        "MYSQL_HOST": "nextmobile-prd-mysqldb.mysql.database.azure.com",
-        "MYSQL_PORT": "3306",
-        "MYSQL_USER": "nextmobile_ro",
-        "MYSQL_PASS": "${NEXTMOBILE_PROD_DB_PASSWORD}",
-        "MYSQL_SSL": "true",
-        "ALLOW_INSERT_OPERATION": "false",
-        "ALLOW_UPDATE_OPERATION": "false",
-        "ALLOW_DELETE_OPERATION": "false"
-      }
-    },
-    "mysql-nextmobile-local": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@benborla29/mcp-server-mysql"
-      ],
-      "env": {
-        "MYSQL_HOST": "127.0.0.1",
-        "MYSQL_PORT": "3306",
-        "MYSQL_USER": "symfony",
-        "MYSQL_PASS": "symfony",
-        "MYSQL_DB": "symfony_db",
-        "MYSQL_SSL": "false",
-        "ALLOW_INSERT_OPERATION": "false",
-        "ALLOW_UPDATE_OPERATION": "false",
-        "ALLOW_DELETE_OPERATION": "false"
-      }
     }
   },
   "hasUsedBackslashReturn": true,

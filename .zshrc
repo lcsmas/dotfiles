@@ -78,3 +78,16 @@ case ":$PATH:" in
 esac
 # pnpm end
 export ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+# Chromium with a persistent remote-debugging port on a DEDICATED profile, so
+# tools (chrome-devtools MCP) can attach to a logged-in session without touching
+# the everyday Chromium profile. Always Chromium (no Chrome on this machine).
+CHROMIUM_DEBUG_PROFILE="$HOME/.config/chromium-debug"
+CHROMIUM_DEBUG_PORT="${CHROMIUM_DEBUG_PORT:-9222}"
+chromium() {
+  /usr/bin/chromium-browser \
+    --remote-debugging-port="$CHROMIUM_DEBUG_PORT" \
+    --user-data-dir="$CHROMIUM_DEBUG_PROFILE" \
+    "$@" >/dev/null 2>&1 &!
+}
+alias chromium-debug='chromium'
