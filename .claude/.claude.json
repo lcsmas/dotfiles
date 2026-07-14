@@ -1553,39 +1553,6 @@
       ],
       "env": {}
     },
-    "postgres-local": {
-      "type": "stdio",
-      "command": "uvx",
-      "args": [
-        "postgres-mcp",
-        "--access-mode=restricted",
-        "postgresql://postgres:postgres@localhost:5432/postgres"
-      ],
-      "env": {}
-    },
-    "postgres-staging": {
-      "type": "stdio",
-      "command": "bash",
-      "args": [
-        "-c",
-        "uvx postgres-mcp --access-mode=restricted \"postgresql://mobileclub:$MC_DB_STAGING_PASSWORD@staging.mobileclub.internal:5432/mobileclub\""
-      ],
-      "env": {
-        "MC_DB_STAGING_PASSWORD": "${MC_DB_STAGING_PASSWORD}"
-      }
-    },
-    "postgres-prod": {
-      "type": "stdio",
-      "command": "bash",
-      "args": [
-        "-c",
-        "uvx postgres-mcp --access-mode=restricted \"postgresql://$MC_DB_PROD_USER:$MC_DB_PROD_PASSWORD@production.mobileclub.internal:5432/mobileclub\""
-      ],
-      "env": {
-        "MC_DB_PROD_USER": "${MC_DB_PROD_USER}",
-        "MC_DB_PROD_PASSWORD": "${MC_DB_PROD_PASSWORD}"
-      }
-    },
     "chrome-devtools": {
       "type": "stdio",
       "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-headed-wrapper.sh",
