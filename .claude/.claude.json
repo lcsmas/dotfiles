@@ -1544,15 +1544,6 @@
   "autoUpdatesProtectedForNative": true,
   "sonnet45MigrationComplete": true,
   "mcpServers": {
-    "context7": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ],
-      "env": {}
-    },
     "chrome-devtools": {
       "type": "stdio",
       "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-headed-wrapper.sh",
@@ -1573,12 +1564,6 @@
       "headers": {
         "Authorization": "Bearer ${GITHUB_TOKEN}"
       }
-    },
-    "chrome-devtools-electron": {
-      "type": "stdio",
-      "command": "/home/lmas/dotfiles/.claude/bin/chrome-devtools-mcp-wrapper.sh",
-      "args": [],
-      "env": {}
     }
   },
   "hasUsedBackslashReturn": true,
