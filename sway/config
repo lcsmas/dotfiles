@@ -11,8 +11,9 @@ set $super Mod4
 # Default modifier (can be overridden by host-specific config)
 set $mod $super
 
-# Include host-specific overrides early (before bindsym commands)
-include '$(./layered-include "${XDG_CONFIG_HOME:-$HOME/.config}/sway/host.d/*.conf")'
+# Include host-specific overrides early (before bindsym commands).
+# Scoped by hostname so each machine only loads its own host.d/<hostname>/*.conf.
+include '$(./layered-include "${XDG_CONFIG_HOME:-$HOME/.config}/sway/host.d/$(hostname)/*.conf")'
 
 set $left h
 set $down j
