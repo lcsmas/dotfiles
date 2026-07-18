@@ -64,6 +64,6 @@
         "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠", 
-	      "on-click": "foot --app-id=nmtui nmtui",
+	      "on-click": "foot --app-id=wlctl wlctl",
 	},
 }
