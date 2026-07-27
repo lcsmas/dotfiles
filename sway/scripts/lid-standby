@@ -87,13 +87,19 @@ enable_standby() {
   rm -f "$PIDFILE"
 }
 
+# Nerd Font glyphs, written as \u escapes so they survive editors/transports
+# that would otherwise mangle the raw bytes. Both are verified present in
+# Hack Nerd Font (the waybar font): U+F236 bed, U+F0E7 bolt.
+GLYPH_ENABLED=$(printf '\uf236')   # bed  -> lid close puts the machine to sleep
+GLYPH_DISABLED=$(printf '\uf0e7')  # bolt -> lid close keeps it powered/awake
+
 emit_status() {
   if standby_enabled; then
     # Lid close WILL suspend.
-    printf '{"text":"","alt":"enabled","tooltip":"Lid close: suspend (click to keep awake)","class":"enabled"}\n'
+    printf '{"text":"%s","alt":"enabled","tooltip":"Lid close: suspend (click to keep awake)","class":"enabled"}\n' "$GLYPH_ENABLED"
   else
     # Lid close will NOT suspend.
-    printf '{"text":"","alt":"disabled","tooltip":"Lid close: stay awake (click to enable suspend)","class":"disabled"}\n'
+    printf '{"text":"%s","alt":"disabled","tooltip":"Lid close: stay awake (click to enable suspend)","class":"disabled"}\n' "$GLYPH_DISABLED"
   fi
 }
 
