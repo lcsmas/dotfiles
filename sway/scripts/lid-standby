@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+# Toggle whether closing the laptop lid suspends the machine.
+#
+# Mechanism: logind's HandleLidSwitch is left at `suspend` (see
+# /etc/systemd/logind.conf.d/10-lid-ignore.conf — a root-owned path, NOT in
+# these dotfiles). To DISABLE lid-suspend we hold a userspace
+# `systemd-inhibit --what=handle-lid-switch` lock; while that process lives,
+# logind ignores the lid. Releasing it restores suspend-on-close.
+#
+# We inhibit rather than rewrite logind.conf because a waybar button runs as
+# the user and cannot edit a root-owned /etc file without a password prompt.
+#
+# Usage:
+#   lid-standby status   -> prints waybar JSON (default)
+#   lid-standby toggle   -> flip, then print JSON
+#   lid-standby on       -> lid closes => suspend (release inhibitor)
+#   lid-standby off      -> lid closes => stay awake (hold inhibitor)
+
+set -u
+
+RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+PIDFILE="$RUNTIME_DIR/lid-standby.pid"
+
+# Serialize concurrent invocations (waybar click + signal refresh can race).
+exec 9>"$RUNTIME_DIR/lid-standby.lock"
+flock 9
+
+# True when our inhibitor process is alive AND is actually ours (guards against
+# a stale pidfile whose PID has been recycled by an unrelated process).
+inhibitor_running() {
+  [[ -f "$PIDFILE" ]] || return 1
+  local pid
+  pid=$(<"$PIDFILE") || return 1
+  [[ "$pid" =~ ^[0-9]+$ ]] || { rm -f "$PIDFILE"; return 1; }
+  if [[ ! -d "/proc/$pid" ]]; then
+    rm -f "$PIDFILE"
+    return 1
+  fi
+  # /proc/<pid>/cmdline is NUL-separated; confirm it is our inhibitor.
+  if ! tr '\0' ' ' <"/proc/$pid/cmdline" 2>/dev/null | grep -q 'handle-lid-switch'; then
+    rm -f "$PIDFILE"
+    return 1
+  fi
+  return 0
+}
+
+# standby ON  == no inhibitor == lid close suspends
+standby_enabled() {
+  ! inhibitor_running
+}
+
+disable_standby() {
+  inhibitor_running && return 0
+  # `sleep infinity` holds the lock for the lifetime of the process.
+  #
+  # setsid + full stdio redirection is REQUIRED, not hygiene: without it the
+  # child inherits our stdout, so any caller reading this script's output
+  # (waybar, a shell pipeline) blocks until the inhibitor exits — i.e. forever.
+  # 9>&- closes our flock fd in the child. Without it the long-lived inhibitor
+  # inherits the lock and every later invocation deadlocks on `flock 9`.
+  setsid systemd-inhibit \
+    --what=handle-lid-switch \
+    --who="lid-standby" \
+    --why="Lid-close standby disabled from waybar" \
+    --mode=block \
+    sleep infinity </dev/null >/dev/null 2>&1 9>&- &
+  echo $! >"$PIDFILE"
+  # Give logind a moment to register the lock so the status we print is real.
+  sleep 0.2
+}
+
+enable_standby() {
+  inhibitor_running || return 0
+  local pid
+  pid=$(<"$PIDFILE")
+  # Kill the whole process group: `systemd-inhibit` execs a child (`sleep`), and
+  # killing only the leader can strand the sleep holding the lock. setsid made
+  # the inhibitor its own group leader, so -PID targets both.
+  kill -TERM -- "-$pid" 2>/dev/null || kill -TERM "$pid" 2>/dev/null
+  # kill only REQUESTS exit; wait for the lock to actually be gone so the
+  # status we print reflects logind's real state rather than our intent.
+  local i
+  for i in {1..20}; do
+    [[ -d "/proc/$pid" ]] || break
+    sleep 0.05
+  done
+  rm -f "$PIDFILE"
+}
+
+emit_status() {
+  if standby_enabled; then
+    # Lid close WILL suspend.
+    printf '{"text":"","alt":"enabled","tooltip":"Lid close: suspend (click to keep awake)","class":"enabled"}\n'
+  else
+    # Lid close will NOT suspend.
+    printf '{"text":"","alt":"disabled","tooltip":"Lid close: stay awake (click to enable suspend)","class":"disabled"}\n'
+  fi
+}
+
+case "${1:-status}" in
+  toggle)
+    if standby_enabled; then disable_standby; else enable_standby; fi
+    emit_status
+    # Nudge waybar to re-read immediately instead of waiting for the interval.
+    pkill -RTMIN+8 waybar 2>/dev/null
+    ;;
+  on)  enable_standby;  emit_status ;;
+  off) disable_standby; emit_status ;;
+  status) emit_status ;;
+  *)
+    echo "usage: ${0##*/} {status|toggle|on|off}" >&2
+    exit 1
+    ;;
+esac

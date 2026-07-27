@@ -49,7 +49,8 @@
 #bluetooth,
 #language,
 #backlight,
-#idle_inhibitor {
+#idle_inhibitor,
+#custom-lid_standby {
   background-color: @surface0;
   opacity: 0.8;
   padding: 5px 15px;
@@ -64,7 +65,8 @@
 #bluetooth:hover,
 #language:hover,
 #backlight:hover,
-#idle_inhibitor:hover {
+#idle_inhibitor:hover,
+#custom-lid_standby:hover {
   background-color: @surface1;
 }
 
@@ -90,8 +92,22 @@
 
 #idle_inhibitor {
   color: @lavender;
+}
+
+/* Leftmost module in modules-right: carries the gap from the workspace list. */
+#custom-lid_standby {
   margin-left: 1rem;
   padding-left: 20px;
+}
+
+/* Lid close suspends the machine — the normal, expected state. */
+#custom-lid_standby.enabled {
+  color: @lavender;
+}
+
+/* Lid close keeps the machine awake — a deliberate override, so flag it. */
+#custom-lid_standby.disabled {
+  color: @peach;
 }
 
 #pulseaudio {

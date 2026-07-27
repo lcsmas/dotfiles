@@ -5,10 +5,24 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     // "modules-center": ["clock"],
-    "modules-right": [ "idle_inhibitor", "bluetooth", "pulseaudio", "network", "sway/language", "backlight", "battery", "clock",  "tray"],
+    "modules-right": [ "custom/lid_standby", "idle_inhibitor", "bluetooth", "pulseaudio", "network", "sway/language", "backlight", "battery", "clock",  "tray"],
     "tray": {
         "icon-size": 21,
         "spacing": 10
+    },
+    // Toggles suspend-on-lid-close. Icon shows the CURRENT behaviour:
+    //   closed lid  = closing the lid suspends
+    //   open lid    = closing the lid keeps the machine awake
+    "custom/lid_standby": {
+        "return-type": "json",
+        "exec": "$HOME/.config/sway/scripts/lid-standby status",
+        "on-click": "$HOME/.config/sway/scripts/lid-standby toggle",
+        // Re-read on SIGRTMIN+8, which the script raises after a toggle so the
+        // icon updates instantly; the interval is just a slow safety net in
+        // case the inhibitor dies behind our back.
+        "signal": 8,
+        "interval": 30,
+        "tooltip": true
     },
     "idle_inhibitor": {
         "format": "{icon}",
