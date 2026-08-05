@@ -1,0 +1,469 @@
+/*
+ * swaync — Catppuccin Mocha
+ *
+ * Design intent: a toast is glanced at sideways while you're in a terminal.
+ * Urgency must be readable before a single word is. So colour lives on ONE
+ * edge — a 3px spine matching sway's `default_border pixel 2` vocabulary —
+ * and everything else stays quiet. Summary in Adwaita Sans (prose reads as
+ * prose), metadata in Hack Nerd Font (data reads as data), same split waybar
+ * already uses.
+ *
+ * cssPriority is "user", so this layers OVER /etc/xdg/swaync/style.css and
+ * only overrides what changes.
+ */
+
+@import url("file:///home/lmas/dotfiles/swaync/mocha.css");
+
+:root {
+  --noti-bg: 17, 17, 27;          /* crust  */
+  --noti-bg-alpha: 0.94;
+  --noti-bg-darker: #11111b;
+  --noti-bg-hover: #181825;       /* mantle */
+  --noti-bg-focus: rgba(49, 50, 68, 0.6);
+  --noti-border-color: rgba(69, 71, 90, 0.55);
+
+  --cc-bg: rgba(17, 17, 27, 0.92);
+
+  --noti-close-bg: rgba(69, 71, 90, 0.4);
+  --noti-close-bg-hover: rgba(243, 139, 168, 0.22);
+
+  --text-color: #cdd6f4;
+  --text-color-disabled: #7f849c;
+  --bg-selected: #89b4fa;
+
+  --border-radius: 8px;
+  --border: 1px solid var(--noti-border-color);
+
+  /* Stock is 64px, which lets the app icon dominate the toast and shove the
+     text into a narrow column. The summary is the thing being read; the icon
+     is only there to say who is talking. */
+  --notification-icon-size: 34px;
+  --notification-app-icon-size: 16px;
+  --notification-group-icon-size: 20px;
+
+  --font-size-summary: 14px;
+  --font-size-body: 13px;
+
+  --notification-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.55),
+    0 6px 18px rgba(0, 0, 0, 0.42);
+
+  --hover-transition: background 0.14s ease-in-out;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────── */
+
+* {
+  font-family: "Adwaita Sans", "Cantarell", sans-serif;
+}
+
+notificationwindow,
+blankwindow {
+  background: transparent;
+}
+
+/* ── Toast shell ─────────────────────────────────────────────────────── */
+
+.floating-notifications .notification,
+.control-center .control-center-list .notification {
+  background: transparent;
+  border-radius: var(--border-radius);
+  margin: 0;
+  padding: 0;
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-row .notification-background {
+  background: rgba(17, 17, 27, 0.94);
+  border: 1px solid rgba(69, 71, 90, 0.55);
+  border-left: 3px solid @overlay0;      /* the spine — urgency overrides below */
+  border-radius: var(--border-radius);
+  box-shadow: var(--notification-shadow);
+  margin: 6px 10px 0 10px;
+  padding: 0;
+  transition: background 0.14s ease-in-out, border-color 0.14s ease-in-out;
+}
+
+.notification-row .notification-background:hover {
+  background: rgba(24, 24, 37, 0.97);
+}
+
+.notification-row:focus .notification-background {
+  border-color: rgba(137, 180, 250, 0.5);
+}
+
+/* ── The spine: urgency, readable peripherally ───────────────────────── */
+
+.notification-row .notification-background .notification.low {
+  border-left: 3px solid @overlay1;
+}
+
+.notification-row .notification-background .notification.normal {
+  border-left: 3px solid @blue;
+}
+
+.notification-row .notification-background .notification.critical {
+  border-left: 3px solid @red;
+  /* A hint bleeding off the spine, not a tinted panel. Kept short and low
+     alpha so it never competes with the summary text. */
+  background: linear-gradient(
+    to right,
+    rgba(243, 139, 168, 0.06) 0%,
+    rgba(243, 139, 168, 0.0) 22%
+  );
+}
+
+/* GTK applies urgency to the inner .notification, so mirror the spine onto
+   the shell that actually paints the left edge. */
+.notification-row .notification-background .notification {
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0;
+}
+
+/* ── Content ─────────────────────────────────────────────────────────── */
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action {
+  border-radius: var(--border-radius);
+  padding: 0;
+  background: transparent;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action:hover {
+  background: transparent;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content {
+  padding: 11px 13px;
+  background: transparent;
+}
+
+/* Summary — the line you actually read */
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  .text-box
+  .summary {
+  font-family: "Adwaita Sans", "Cantarell", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: @text;
+  letter-spacing: 0.1px;
+}
+
+/* Body — quieter, never competes with the summary */
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  .text-box
+  .body {
+  font-family: "Adwaita Sans", "Cantarell", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: @subtext0;
+  margin-top: 3px;
+}
+
+/* Timestamp — metadata reads as data, in the waybar monospace */
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  .text-box
+  .time {
+  font-family: "Hack Nerd Font", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: @overlay1;
+  letter-spacing: 0.2px;
+  margin-right: 26px;
+}
+
+/* Icons */
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  .image {
+  border-radius: 6px;
+  margin-right: 12px;
+  min-width: 34px;
+  min-height: 34px;
+  -gtk-icon-size: 34px;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  .app-icon {
+  -gtk-icon-transform: scale(0.85);
+}
+
+/* Progress (volume/brightness OSD) */
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  progressbar {
+  margin-top: 9px;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  progressbar trough {
+  background: @surface0;
+  border: none;
+  border-radius: 99px;
+  min-height: 5px;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-default-action
+  .notification-content
+  progressbar progress {
+  background: @blue;
+  border-radius: 99px;
+  min-height: 5px;
+}
+
+/* ── Actions ─────────────────────────────────────────────────────────── */
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-action,
+.control-center
+  .control-center-list
+  .notification
+  .notification-action {
+  background: @surface0;
+  color: @subtext1;
+  border: none;
+  border-radius: 6px;
+  margin: 0 6px 9px 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background 0.14s ease-in-out, color 0.14s ease-in-out;
+}
+
+.notification-row
+  .notification-background
+  .notification
+  .notification-action:hover,
+.control-center
+  .control-center-list
+  .notification
+  .notification-action:hover {
+  background: @surface1;
+  color: @text;
+}
+
+/* ── Close button ────────────────────────────────────────────────────── */
+
+.close-button {
+  background: rgba(69, 71, 90, 0.35);
+  color: @subtext0;
+  border: none;
+  border-radius: 99px;
+  margin: 7px 7px 0 0;
+  padding: 0;
+  min-width: 20px;
+  min-height: 20px;
+  box-shadow: none;
+  text-shadow: none;
+  transition: background 0.14s ease-in-out, color 0.14s ease-in-out;
+}
+
+.close-button:hover {
+  background: rgba(243, 139, 168, 0.22);
+  color: @red;
+}
+
+/* ── Grouping ────────────────────────────────────────────────────────── */
+
+.notification-group {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-group .notification-group-headers {
+  color: @overlay1;
+  font-family: "Hack Nerd Font", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-left: 14px;
+}
+
+.notification-group .notification-group-icon {
+  color: @overlay1;
+}
+
+/* Collapsed stack: let the cards behind read as a neat stacked edge rather
+   than mismatched slivers poking out at odd offsets. */
+.notification-group.collapsed .notification-row:not(:last-child) {
+  margin-bottom: -6px;
+}
+
+.notification-group.collapsed .notification-row .notification {
+  border-radius: var(--border-radius);
+}
+
+.notification-group.critical .notification-group-headers {
+  color: @red;
+}
+
+/* ── Control center ──────────────────────────────────────────────────── */
+
+.control-center {
+  background: rgba(17, 17, 27, 0.94);
+  border: 1px solid rgba(69, 71, 90, 0.5);
+  border-radius: 10px;
+  box-shadow: var(--notification-shadow);
+  color: @text;
+  padding: 10px;
+}
+
+.control-center .control-center-list {
+  background: transparent;
+}
+
+.control-center .control-center-list-placeholder {
+  color: @overlay0;
+  font-size: 13px;
+}
+
+/* Widgets */
+.widget-title {
+  color: @text;
+  margin: 4px 6px 10px 6px;
+}
+
+.widget-title > label {
+  font-family: "Adwaita Sans", "Cantarell", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: @text;
+}
+
+.widget-title > button {
+  background: @surface0;
+  color: @subtext1;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background 0.14s ease-in-out, color 0.14s ease-in-out;
+}
+
+.widget-title > button:hover {
+  background: @red;
+  color: @crust;
+}
+
+.widget-dnd {
+  color: @text;
+  margin: 4px 6px 10px 6px;
+  font-size: 13px;
+}
+
+.widget-dnd > switch {
+  background: @surface0;
+  border: none;
+  border-radius: 99px;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: @blue;
+}
+
+.widget-dnd > switch slider {
+  background: @overlay2;
+  border: none;
+  border-radius: 99px;
+}
+
+.widget-dnd > switch:checked slider {
+  background: @crust;
+}
+
+.widget-label > label {
+  color: @text;
+  font-size: 13px;
+}
+
+.widget-mpris {
+  color: @text;
+}
+
+.widget-mpris .widget-mpris-title {
+  font-family: "Adwaita Sans", "Cantarell", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: @text;
+}
+
+.widget-mpris .widget-mpris-subtitle {
+  font-size: 12px;
+  color: @subtext0;
+}
+
+.widget-buttons-grid {
+  background: transparent;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @surface0;
+  color: @subtext1;
+  border: none;
+  border-radius: 6px;
+  margin: 3px;
+  box-shadow: none;
+  transition: background 0.14s ease-in-out, color 0.14s ease-in-out;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: @surface1;
+  color: @text;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+  background: @blue;
+  color: @crust;
+}
