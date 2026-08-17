@@ -217,3 +217,4 @@ User: "How do I use Next.js server actions?"
 - Use `topic` parameter to narrow down large docs
 - Context7 works without API key (with rate limits)
 - For better performance, API key can be added to MCP config
+@LESSONS.md

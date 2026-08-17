@@ -1,5 +1,5 @@
 {
-  "model": "opus[1m]",
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -109,7 +109,7 @@
     "type": "command",
     "command": "bash /home/lmas/dotfiles/.claude/statusline-robbyrussell.sh"
   },
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "editorMode": "vim",
-  "tui": "fullscreen"
+  "editorMode": "vim"
 }
