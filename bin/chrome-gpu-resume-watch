@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Fixes Chrome scrambling/render corruption after suspend on NVIDIA + Wayland (Sway).
+# Listens to logind's PrepareForSleep signal; on resume, kills Chrome's GPU
+# process. Chrome respawns it instantly and re-rasterizes everything — tabs
+# are preserved, only a brief flash. Matches ONLY Google Chrome's GPU process
+# (not Electron apps or other Chromium-based browsers).
+set -u
+
+dbus-monitor --system \
+  "type='signal',sender='org.freedesktop.login1',interface='org.freedesktop.login1.Manager',member='PrepareForSleep'" |
+while read -r line; do
+  # "boolean false" on this filtered stream == just resumed from sleep
+  if [[ "$line" == *"boolean false"* ]]; then
+    sleep 3  # let the GPU finish resuming
+    if pgrep -f "^/opt/google/chrome/chrome --type=gpu-process" >/dev/null; then
+      pkill -f "^/opt/google/chrome/chrome --type=gpu-process"
+      echo "$(date '+%F %T') resumed: restarted Chrome GPU process"
+    fi
+  fi
+done
