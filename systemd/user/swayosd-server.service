@@ -1,0 +1,14 @@
+[Unit]
+Description=SwayOSD server (macOS-style on-screen display)
+Documentation=https://github.com/ErikReider/SwayOSD
+PartOf=sway-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayosd-server
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=sway-session.target

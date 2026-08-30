@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Show a SwayOSD overlay when the keyboard layout changes.
+#
+# SwayOSD has no native layout hook, so this subscribes to sway's IPC `input`
+# events and pushes a --custom-message when the active layout name changes.
+#
+# Sway emits an `input` event for EVERY input change (focus, config reload,
+# libinput property tweaks), not just layout switches — most carry the layout
+# unchanged. We therefore diff against the last-seen name and stay silent
+# unless it actually differs, otherwise the OSD would flash constantly.
+#
+# Started from sway config.d/01-app-asahi.conf.
+
+set -uo pipefail
+
+# Shorten xkb's verbose names into something HUD-sized.
+# "English (US, intl., with dead keys)" -> "US intl"
+shorten() {
+	case "$1" in
+	*"intl"*) printf 'US intl' ;;
+	"English (US)") printf 'US' ;;
+	*) printf '%s' "$1" ;;
+	esac
+}
+
+# Seed with the current layout so the first real switch is what fires, rather
+# than the script announcing the layout that was already active at startup.
+last=$(swaymsg -t get_inputs 2>/dev/null |
+	jq -r 'map(select(.type == "keyboard")) | .[0].xkb_active_layout_name // empty')
+
+swaymsg -t subscribe -m '["input"]' 2>/dev/null | while read -r event; do
+	# Only keyboard devices carry a layout; ignore mice/touchpads.
+	name=$(printf '%s' "$event" |
+		jq -r 'select(.input.type == "keyboard") | .input.xkb_active_layout_name // empty')
+
+	[ -z "$name" ] && continue
+	[ "$name" = "$last" ] && continue
+	last="$name"
+
+	swayosd-client \
+		--custom-icon input-keyboard \
+		--custom-message "$(shorten "$name")" \
+		>/dev/null 2>&1 || true
+done

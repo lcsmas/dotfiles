@@ -1,0 +1,13 @@
+[Unit]
+Description=SwayOSD overlay on keyboard layout change
+PartOf=sway-session.target
+After=sway-session.target swayosd-server.service
+
+[Service]
+Type=simple
+ExecStart=/home/lmas/.config/sway/scripts/swayosd-layout-watcher
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=sway-session.target

@@ -1,0 +1,27 @@
+# SwayOSD — macOS-style on-screen display.
+# Managed in dotfiles; ~/.config/swayosd is a symlink here.
+
+[server]
+style = "~/.config/swayosd/style.css"
+
+# Vertical position of the OSD, as a fraction of screen height.
+# macOS shows it low-centre; 0.85 puts it just above the dock area.
+top_margin = 0.85
+
+# Matches the 200% ceiling already used by the sway volume bindings.
+max_volume = 200
+
+# Never let brightness hit 0 (black screen with no way back).
+min_brightness = 5
+
+show_percentage = true
+
+# Show the OSD when the firmware itself changes keyboard backlight.
+keyboard_backlight = true
+
+# macOS's HUD lingers ~1s after the last keypress.
+duration = 1000
+
+playerctl_format = "{artist} - {title}"
+
+[client]

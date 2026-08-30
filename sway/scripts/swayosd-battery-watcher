@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# Show a SwayOSD overlay when the battery crosses a low threshold, like macOS.
+#
+# Polls the macsmc-battery sysfs node. sysfs is the authority here rather than
+# upower, because upower is not guaranteed to be running in this session.
+#
+# Each threshold fires ONCE per discharge cycle: crossing 20% warns, and it
+# will not warn again at 20% until the battery has been charged back above it.
+# Without that latch a battery hovering at the threshold would re-warn on
+# every poll.
+#
+# Started from sway config.d/01-app-asahi.conf.
+
+set -uo pipefail
+
+BATTERY=/sys/class/power_supply/macsmc-battery
+POLL_SECONDS=60
+
+# Descending — the first threshold the level is at-or-below is the one shown.
+THRESHOLDS=(5 10 20)
+
+# Highest threshold already warned about this discharge cycle. 101 = none yet.
+warned_at=101
+
+while true; do
+	# The battery node disappears on some suspend/resume cycles; treat a
+	# missing or unreadable node as "nothing to report" rather than exiting,
+	# so the watcher survives until it comes back.
+	if [ ! -r "$BATTERY/capacity" ] || [ ! -r "$BATTERY/status" ]; then
+		sleep "$POLL_SECONDS"
+		continue
+	fi
+
+	capacity=$(cat "$BATTERY/capacity" 2>/dev/null)
+	status=$(cat "$BATTERY/status" 2>/dev/null)
+
+	# Guard against a transient empty/garbage read.
+	case "$capacity" in
+	'' | *[!0-9]*)
+		sleep "$POLL_SECONDS"
+		continue
+		;;
+	esac
+
+	if [ "$status" = "Discharging" ]; then
+		for threshold in "${THRESHOLDS[@]}"; do
+			if [ "$capacity" -le "$threshold" ]; then
+				# Only warn if this is a LOWER threshold than the last
+				# one warned about — stops 20% re-firing every minute.
+				if [ "$threshold" -lt "$warned_at" ]; then
+					warned_at=$threshold
+
+					# Adwaita only ships these as -symbolic; the
+					# unsuffixed names fall back to a stale legacy
+					# PNG from AdwaitaLegacy.
+					if [ "$capacity" -le 10 ]; then
+						icon=battery-caution-symbolic
+					else
+						icon=battery-low-symbolic
+					fi
+
+					# --custom-message is NOT rendered when
+					# --custom-progress is set; the bar's label comes
+					# from --custom-progress-text instead.
+					swayosd-client \
+						--custom-icon "$icon" \
+						--custom-progress "$(awk -v c="$capacity" 'BEGIN { printf "%.2f", c / 100 }')" \
+						--custom-progress-text "Battery ${capacity}%" \
+						--duration 3000 \
+						>/dev/null 2>&1 || true
+				fi
+				break
+			fi
+		done
+	else
+		# Plugged in: re-arm every threshold above the current level so the
+		# next discharge cycle warns again.
+		if [ "$capacity" -gt "$warned_at" ]; then
+			warned_at=101
+		fi
+	fi
+
+	sleep "$POLL_SECONDS"
+done
