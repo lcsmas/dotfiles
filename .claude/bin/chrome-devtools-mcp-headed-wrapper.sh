@@ -22,7 +22,11 @@ EXECUTABLE_PATH="${CHROME_DEVTOOLS_MCP_EXECUTABLE:-/usr/lib64/chromium-browser/c
 
 mkdir -p "$USER_DATA_DIR"
 
-exec npx chrome-devtools-mcp@latest \
+# Lazy: the real server (and its Chromium) starts only on the first tool call;
+# the handshake is answered from a cache (lazy-mcp.mjs). Version pinned so npx
+# does not hit the npm registry on every agent start.
+exec /usr/bin/node "$(dirname "$(readlink -f "$0")")/lazy-mcp.mjs" -- \
+  npx -y --prefer-offline chrome-devtools-mcp@1.10.1 \
   --headless=false \
   --executablePath="$EXECUTABLE_PATH" \
   --userDataDir="$USER_DATA_DIR" \
