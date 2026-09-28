@@ -16,6 +16,12 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { createInterface } from 'node:readline';
 
+if (['-h', '--help'].includes(process.argv[2])) {
+  process.stdout.write('usage: lazy-mcp.mjs -- <command> [args...]\n' +
+    'Start a stdio MCP server only on its first tool call; answer the handshake from a cache.\n' +
+    'Cache: ${XDG_CACHE_HOME:-~/.cache}/lazy-mcp/. Debug log to stderr: LAZY_MCP_DEBUG=1.\n');
+  process.exit(0);
+}
 const sep = process.argv.indexOf('--');
 const cmd = sep === -1 ? process.argv.slice(2) : process.argv.slice(sep + 1);
 if (cmd.length === 0) {
