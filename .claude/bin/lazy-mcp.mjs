@@ -29,7 +29,8 @@ if (cmd.length === 0) {
   process.exit(2);
 }
 
-const CACHED = ['initialize', 'tools/list', 'prompts/list', 'resources/list', 'resources/templates/list'];
+// server/discover: newer clients send it BEFORE initialize; an uncached probe spawned the server on every start.
+const CACHED = ['server/discover', 'initialize', 'tools/list', 'prompts/list', 'resources/list', 'resources/templates/list'];
 const cacheDir = join(process.env.XDG_CACHE_HOME || join(homedir(), '.cache'), 'lazy-mcp');
 const cacheFile = join(cacheDir, createHash('sha256').update(JSON.stringify(cmd)).digest('hex').slice(0, 16) + '.json');
 const log = (m) => process.env.LAZY_MCP_DEBUG && process.stderr.write(`[lazy-mcp] ${m}\n`);
@@ -39,10 +40,15 @@ try {
   cache = JSON.parse(readFileSync(cacheFile, 'utf8'));
   if (!cache?.results?.initialize || !cache.results['tools/list']) cache = null;
 } catch {}
-const fresh = { command: cmd, results: {} };
+const fresh = { command: cmd, results: {}, errors: {} };
 function saveCache() {
   if (!fresh.results.initialize || !fresh.results['tools/list']) return;
-  const merged = { command: cmd, savedAt: new Date().toISOString(), results: { ...(cache?.results ?? {}), ...fresh.results } };
+  const merged = {
+    command: cmd,
+    savedAt: new Date().toISOString(),
+    results: { ...(cache?.results ?? {}), ...fresh.results },
+    errors: { ...(cache?.errors ?? {}), ...fresh.errors }, // e.g. -32601 for a probe the server does not support
+  };
   try {
     mkdirSync(cacheDir, { recursive: true });
     const tmp = `${cacheFile}.${process.pid}.tmp`;
@@ -111,10 +117,9 @@ function onServerLine(line) {
   if (msg.id !== undefined && !msg.method && pendingList.has(msg.id)) {
     const method = pendingList.get(msg.id);
     pendingList.delete(msg.id);
-    if (msg.result) {
-      fresh.results[method] = msg.result;
-      saveCache();
-    }
+    if (msg.result) fresh.results[method] = msg.result;
+    else if (msg.error) fresh.errors[method] = msg.error;
+    saveCache();
   }
   out(msg);
 }
@@ -152,6 +157,9 @@ function onClientLine(line) {
     if (msg.method === 'ping') return out({ jsonrpc: '2.0', id: msg.id, result: {} });
     if (msg.id !== undefined && CACHED.includes(msg.method) && cache.results[msg.method]) {
       return out({ jsonrpc: '2.0', id: msg.id, result: cache.results[msg.method] });
+    }
+    if (msg.id !== undefined && CACHED.includes(msg.method) && cache.errors?.[msg.method]) {
+      return out({ jsonrpc: '2.0', id: msg.id, error: cache.errors[msg.method] });
     }
     if (msg.method?.startsWith('notifications/')) return; // nothing to notify yet
   }
