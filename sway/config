@@ -54,9 +54,8 @@ default_border pixel 2
 default_orientation horizontal
 #corner_radius 12
 
-exec swayidle \
-     timeout 36000 'swaylock -f -c 000000' \
-     timeout 36001 'swaylock -f -c 000000; systemctl suspend' \
+# No idle timeout (no lock/suspend on keyboard inactivity); only lock before sleep (lid).
+exec swayidle -w \
      before-sleep 'swaylock -f -c 000000'
 
 # Read `man 5 sway-input` for more information about this section.
